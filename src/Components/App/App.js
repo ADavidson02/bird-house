@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react'
 import { Route, Switch } from 'react-router-dom'
+import Home from '../Home/Home'
 import Overview from '../Overview/Overview'
 import Map from '../Map/Map'
 import Gallery from '../Gallery/Gallery'
@@ -16,7 +17,7 @@ const App = () => {
   return (
     <main>
       <Switch>
-        <Route exact path='/' />
+        <Route exact path='/' component={Home}/>
         <Route exact path='/overview' component={Overview} />
         <Route exact path='/map' component={Map} />
         <Route exact path='/gallery' component={Gallery} />
