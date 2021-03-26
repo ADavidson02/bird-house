@@ -10,6 +10,7 @@ import Availability from '../Availability/Avilability'
 import Reviews from '../Reviews/Reviews'
 import Contact from '../Contact/Contact'
 import Book from '../Book/Book'
+import Header from '../Header/Header'
 
 import './App.css';
 
@@ -17,6 +18,7 @@ const App = () => {
   return (
     <main>
       <Switch>
+        <Header />
         <Route exact path='/' component={Home}/>
         <Route exact path='/overview' component={Overview} />
         <Route exact path='/map' component={Map} />
