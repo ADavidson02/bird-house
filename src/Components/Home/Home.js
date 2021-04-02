@@ -6,6 +6,16 @@ import{ Paper, Container } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import BottomNavigation from '@material-ui/core/BottomNavigationAction';
 import TextField from '@material-ui/core/TextField';
+import {
+  DatePicker,
+  TimePicker,
+  DateTimePicker,
+  MuiPickersUtilsProvider,
+  KeyboardTimePicker,
+  KeyboardDatePicker
+} from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -37,9 +47,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Home = () => {
+const Home = (props) => {
+  let { history } = props;
   const classes = useStyles()
   const [value, setValue] = useState('')
+  const [arrivalDate, setArrivalDate] = useState(null)
+  const [departureDate, setDepartureDate] = useState(null)
+
+  const handleArrivalChange  = (date) => {
+    setArrivalDate(date)
+  }
+  const handleDepartureChange = (date) => {
+    setDepartureDate(date)
+  }
+
   return (
     <Grid container spacing={6}>
       <Grid item xs={12}>
@@ -48,15 +69,46 @@ const Home = () => {
         </Paper>
         <Container>
           <TextField
-          id="date"
-          label="Arrival"
-          type='date'
-          defaultValue="Arrivial"
-          className={classes.textField}
-                  InputLabelProps={{
-          shrink: true,
-        }} />
-          </Container>
+            id='date'
+            label='Arrival'
+            type='date'
+            defaultValue='Arrival'
+            className={classes.textField}
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
+          <MuiPickersUtilsProvider utils={DateFnsUtils}>
+            <Grid container justify='space-around'>
+              <KeyboardDatePicker
+                disableToolbar
+                variant='dialog'
+                format='MM/dd/yyy'
+                margin='normal'
+                id='date-picker'
+                label='Arrivial'
+                value={arrivalDate}
+                onChange={handleArrivalChange}
+                KeyboardButtonProps={{
+                  'aria-label': 'change date',
+                }}
+              />
+              <KeyboardDatePicker
+                disableToolbar
+                variant='dialog'
+                format='MM/dd/yyy'
+                margin='normal'
+                id='date-picker'
+                label='Departure'
+                value={departureDate}
+                onChange={handleDepartureChange}
+                KeyboardButtonProps={{
+                  'aria-label': 'change date',
+                }}
+              />
+            </Grid>
+          </MuiPickersUtilsProvider>
+        </Container>
       </Grid>
       <Grid
         item
