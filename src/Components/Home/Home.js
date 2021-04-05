@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
 import { Grid, makeStyles, ThemeProvider } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { Paper, Typography } from '@material-ui/core';
 import { theme } from '../../themes/themes';
-// import Typography from '@material-ui/core/Typography';
 import imageOne from '../../assets/bird-house-1.webp';
-// import GridList from '@material-ui/core/GridList';
-// import GridListTile from '@material-ui/core/GridListTile';
 
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import {
