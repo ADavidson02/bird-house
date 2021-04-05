@@ -155,25 +155,25 @@ const Home = (props) => {
           {dateError && <h3>Please make sure both fields have a date</h3>}
         </MuiPickersUtilsProvider>
       </Grid>
-      <Grid container spacing={3} className={classes.ui}>
-        <Grid item xs={6}>
+      <Grid container spacing={2} className={classes.ui}>
+        <Grid item xs={5}>
           <Paper elevation={0} className={classes.paper}>
             <img src={imageOne} className={classes.image} />
           </Paper>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={5}>
           <Paper elevation={0} className={classes.paper}>
             Description
           </Paper>
         </Grid>
       </Grid>
-      <Grid container spacing={3} className={classes.ui}>
-        <Grid item xs={6}>
+      <Grid container spacing={2} className={classes.ui}>
+        <Grid item xs={5}>
           <Paper elevation={0} className={classes.paper}>
             <img src={imageOne} className={classes.image} />
           </Paper>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={5}>
           <Paper elevation={0} className={classes.paper}>
             Description
           </Paper>
