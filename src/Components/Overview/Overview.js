@@ -62,6 +62,18 @@ const Overview = () => {
           walking in. Inside you will be greeted by beautiful new, modern
           finishes and you will immediately feel at home!
         </p>
+        <Typography variant='h6'>Kitchen</Typography>
+        <p>
+          One of our guest favorite amenity is the kitchen. You will find a
+          full-size refrigerator, 2 burner electric cooktop, a convection
+          microwave (we do not have a traditional oven, but the microwave can
+          heat just like one), sink and dishwasher. We also stock the kitchen
+          with the majority of supplies you will need for cooking and dining.
+          Such as, salt, pepper, oil, vinegar, pots, pans, mixing bowls, a
+          Keurig with supplied K-cups, a regular coffee maker, plates, bowls,
+          cups, silverware, knives, cooking utensils, toaster and a Britta
+          purified water pitcher.
+        </p>
         
       </div>
     </ThemeProvider>
