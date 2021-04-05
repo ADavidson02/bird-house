@@ -101,6 +101,12 @@ const Overview = () => {
           exhausted in the evening, and the beds were so comfy - even the sofa
           sleeper!)
         </p>
+        <Typography variant='h6'>Bathroom</Typography>
+        <p>
+          The bathroom is a small, but a stunning ¾ bath (no bathtub). The
+          shower has both a traditional shower head and a rain shower head that
+          can be controlled independently for ultimate comfort.
+        </p>
         
       </div>
     </ThemeProvider>
