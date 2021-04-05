@@ -8,10 +8,10 @@ import { theme } from '../../themes/themes';
 import imageOne from '../../assets/bird-house-1.webp';
 // import GridList from '@material-ui/core/GridList';
 // import GridListTile from '@material-ui/core/GridListTile';
-import DateRangeIcon from '@material-ui/icons/DateRange';
+
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import {
   MuiPickersUtilsProvider,
-  KeyboardDatePicker,
 } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import { DatePicker } from '@material-ui/pickers';
@@ -45,8 +45,8 @@ const useStyles = makeStyles((theme) => ({
     outline: '3px solid red',
     // maxWidth: '100%',
     display: 'flex',
-    justify: 'center',
-    // alignContent: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
     zIndex: '1',
     // direction: 'row'
   },
@@ -63,10 +63,14 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     flexBasis: '0',
+    margin: '0',
+    '&:hover': {
+      backgroundColor: 'green',
+    },
   },
   ui: {
     margin: '2px',
-  }
+  },
 }));
 
 const Home = (props) => {
@@ -99,7 +103,10 @@ const Home = (props) => {
     <ThemeProvider theme={theme}>
       <Grid container className={classes.top}>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
-          <img src={imageOne} style={{ borderRadius: '.5125em', width: '40em', height: '40em' }} />
+          <img
+            src={imageOne}
+            style={{ borderRadius: '.5125em', width: '40em', height: '40em' }}
+          />
           <Grid container>
             <Grid item xs={12}>
               <Typography variant='h4' style={{ zIndex: 1 }}>
@@ -107,7 +114,7 @@ const Home = (props) => {
               </Typography>
             </Grid>
             <Grid container spacing={0} className={classes.bar}>
-              <Grid item lg={3} md={3} xs={false}>
+              <Grid item xs={false}>
                 <DatePicker
                   disableToolbar
                   variant='outlined'
@@ -122,9 +129,8 @@ const Home = (props) => {
                   }}
                 />
               </Grid>
-              <Grid item lg={3} md={3} xs={false} spacing={0}>
+              <Grid item spacing={0}>
                 <DatePicker
-                  startIcon={<DateRangeIcon />}
                   disableToolbar
                   variant='outlined'
                   format='MM/dd/yyyy'
@@ -138,8 +144,9 @@ const Home = (props) => {
                   }}
                 />
               </Grid>
-              <Grid item lg={3} md={3} xs={6}>
+              <Grid item>
                 <Button
+                  endIcon={<ArrowForwardIosIcon />}
                   variant='contained'
                   onClick={(e) => handleBook(arrivalDate, departureDate)}
                   className={classes.button}
@@ -148,8 +155,8 @@ const Home = (props) => {
                 </Button>
               </Grid>
             </Grid>
-            {dateError && <h3>Please make sure both fields have a date</h3>}
           </Grid>
+          {dateError && <h3>Please make sure both fields have a date</h3>}
         </MuiPickersUtilsProvider>
       </Grid>
       <Grid container spacing={3} className={classes.ui}>
