@@ -49,7 +49,20 @@ const Overview = () => {
           stunning bathroom with 2 shower heads will leave you refreshed, never
           wanting to leave!
         </p>
-
+        <Typography variant='h6'>The space</Typography>
+        <p>Welcome to the Bird House! We can not wait to have you stay!</p>
+        <p>
+          The Bird House is a studio style living arrangement, above a detached
+          garage, that we designed with comfort and convenience in mind. You
+          will find everything you need for a couple nights or several months in
+          this completely private space. No shared walls, no shared living
+          space, and tons of privacy on the back deck! As you arrive at our
+          quiet, charming neighborhood you will find plenty of parking in front
+          of our home. Checking in is as simple as entering a 4-digit code and
+          walking in. Inside you will be greeted by beautiful new, modern
+          finishes and you will immediately feel at home!
+        </p>
+        
       </div>
     </ThemeProvider>
   );
