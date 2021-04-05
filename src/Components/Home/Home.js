@@ -152,6 +152,30 @@ const Home = (props) => {
           </Grid>
         </MuiPickersUtilsProvider>
       </Grid>
+      <Grid container spacing={3} className={classes.ui}>
+        <Grid item xs={6}>
+          <Paper elevation={0} className={classes.paper}>
+            <img src={imageOne} className={classes.image} />
+          </Paper>
+        </Grid>
+        <Grid item xs={6}>
+          <Paper elevation={0} className={classes.paper}>
+            Description
+          </Paper>
+        </Grid>
+      </Grid>
+      <Grid container spacing={3} className={classes.ui}>
+        <Grid item xs={6}>
+          <Paper elevation={0} className={classes.paper}>
+            <img src={imageOne} className={classes.image} />
+          </Paper>
+        </Grid>
+        <Grid item xs={6}>
+          <Paper elevation={0} className={classes.paper}>
+            Description
+          </Paper>
+        </Grid>
+      </Grid>
     </ThemeProvider>
   );
 };
