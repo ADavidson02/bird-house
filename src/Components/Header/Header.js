@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { withRouter } from 'react-router-dom'
-
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {
   AppBar,
@@ -30,18 +29,18 @@ const useStyles = makeStyles((theme) => ({
 const Header = (props) => {
   const { history } = props;
   const classes = useStyles();
-  const [anchorEle, setAnchorEle] = useState(null);
-  const open = Boolean(anchorEle);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
 
   const handleMenu = (event) => {
-    setAnchorEle(event.currentTarget);
+    setAnchorEl(event.currentTarget);
   };
 
   const handleMenuClick = (routerURL) => {
     history.push(routerURL);
-    setAnchorEle(null);
+    setAnchorEl(null);
   };
 
   const menuItems = [
@@ -90,7 +89,7 @@ const Header = (props) => {
           <Typography
             variant='h6'
             className={classes.title}
-            style={{ color: 'teal', marginRight: '4em' }}
+            style={{ marginRight: '4em' }}
           >
             Birdhouse
           </Typography>
@@ -100,7 +99,7 @@ const Header = (props) => {
                 <IconButton
                   edge='start'
                   className={classes.menuButton}
-                  color='teal'
+                  color='inherit'
                   aria-label='menu'
                   onClick={handleMenu}
                 >
@@ -108,7 +107,7 @@ const Header = (props) => {
                 </IconButton>
                 <Menu
                   id='menu-appbar'
-                  anchorEle={anchorEle}
+                  anchorEl={anchorEl}
                   anchorOrigin={{
                     vertical: 'top',
                     horizontal: 'right',
@@ -119,7 +118,7 @@ const Header = (props) => {
                     horizontal: 'right',
                   }}
                   open={open}
-                  onClose={() => setAnchorEle(null)}
+                  onClose={() => setAnchorEl(null)}
                 >
                   {menuItems.map((menuItem) => {
                     return (
@@ -142,7 +141,7 @@ const Header = (props) => {
                       data-testid={menuItem.menuTitle}
                       key={menuItem.menuTitle}
                       onClick={() => handleMenuClick(menuItem.pageURL)}
-                      style={{color: 'teal', textSizeAdjust: 'small'}}
+                      style={{color: 'primary', textSizeAdjust: 'small'}}
                     >
                       {menuItem.menuTitle}
                     </Button>
