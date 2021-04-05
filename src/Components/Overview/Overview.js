@@ -88,6 +88,19 @@ const Overview = () => {
           evening? Turn on the electric fireplace, with or without the heat, and
           enjoy the ambiance.
         </p>
+        <Typography variant='h6'>Sleeping</Typography>
+        <p>
+          The main bed is a very comfy queen mattress on a custom murphy bed.
+          The murphy bed is designed to fold up to make more space if needed. No
+          expense was spared with the sleeping arrangements as a good night
+          sleep is one of the most important factors for a great stay! There is
+          also a desk that can be flipped out when the murphy bed is up! You
+          will find another bed as a queen sleeper sofa with an upgraded memory
+          foam mattress. I like to let our reviews to speak for themselves and
+          the mattresses are always very important. (From Leslie, we were
+          exhausted in the evening, and the beds were so comfy - even the sofa
+          sleeper!)
+        </p>
         
       </div>
     </ThemeProvider>
