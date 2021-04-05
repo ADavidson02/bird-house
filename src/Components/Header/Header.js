@@ -12,11 +12,13 @@ import {
   useMediaQuery,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import { MicNone, NoEncryption } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     textAlign: 'left',
+    elevation: 0,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -84,12 +86,11 @@ const Header = (props) => {
 
   return (
     <div className={classes.root}>
-      <AppBar position='static'>
+      <AppBar position='static' elevation={0} marginBottom="1em">
         <Toolbar style={{ background: 'white' }}>
           <Typography
             variant='h6'
             className={classes.title}
-            style={{ marginRight: '4em' }}
           >
             Birdhouse
           </Typography>
