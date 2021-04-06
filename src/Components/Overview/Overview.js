@@ -17,10 +17,9 @@ import LocalLaundryServiceOutlinedIcon from '@material-ui/icons/LocalLaundryServ
 import WifiOutlinedIcon from '@material-ui/icons/WifiOutlined';
 import KitchenOutlinedIcon from '@material-ui/icons/KitchenOutlined';
 import Modal from '@material-ui/core/Modal';
+import Dialog from '@material-ui/core/Dialog';
 import Divider from '@material-ui/core/Divider';
 import './Overview.scss';
-
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -54,10 +53,13 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
   },
   subTitle: {
+    fontFamily: 'unquote',
+    fontSize: '19px',
     display: 'flex',
     alignContent: 'flex-start',
     marginLeft: '3em',
     marginRight: '2em',
+    padding: '.5em',
   },
   sectionHeader: {
     fontFamily: 'unquote',
@@ -67,6 +69,28 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '1em',
     marginRight: '2em',
     textTransform: 'bold',
+    textAlign: 'left',
+  },
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'scroll',
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    borderRadius: '30px',
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+    width: 'fit-content',
+    margin: '5em'
+  },
+  ulText: {
+    display: 'flex',
+    alignContent: 'flex-start',
+    marginRight: '2em',
+    fontFamily: 'unquote',
+    fontSize: '16',
     textAlign: 'left',
   },
 }));
@@ -264,16 +288,58 @@ const Overview = () => {
             <KitchenOutlinedIcon />
             Kitchen
           </Grid>
-          <Button onClick={handleOpen}>
-            Open Modal
-          </Button>
+          <Button onClick={handleOpen}>Open Modal</Button>
           <Modal
             open={open}
             onClose={handleClose}
             aria-labelledby='simple-modal-title'
             aria-describedby='simple-modal-description'
+            style={{ overflow: 'scroll' }}
           >
-            
+            <div className={classes.paper}>
+              <Typography className={classes.subTitle}>Bathroom</Typography>
+              <ul className={classes.ulText}>Conditioner</ul>
+              <Divider />
+              <ul className={classes.ulText}>Cleaning products</ul>
+              <Divider />
+              <ul className={classes.ulText}>Shampoo</ul>
+              <Divider />
+              <ul className={classes.ulText}>Hair dryer</ul>
+              <Divider />
+              <ul className={classes.ulText}>Hot water</ul>
+              <Divider />
+              <ul className={classes.ulText}>Body soap</ul>
+              <Divider />
+              <Typography className={classes.subTitle}>
+                Bedroom and laundry
+              </Typography>
+              <ul className={classes.ulText}>
+                Clothing storage, dresser and walk-in closet
+              </ul>
+              <Divider />
+              <ul className={classes.ulText}>Washer</ul>
+              <Divider />
+              <ul className={classes.ulText}>Dryer</ul>
+              <Divider />
+              <ul className={classes.ulText}>Essentials:</ul>
+              <small
+                style={{ padding: theme.spacing(2, 4, 3) }}
+              >
+                Towels, bed sheets, soap, toilet paper
+              </small>
+              <Divider />
+              <ul className={classes.ulText}>Hangers</ul>
+              <Divider />
+              <ul className={classes.ulText}>Iron</ul>
+              <Divider />
+              <ul className={classes.ulText}>Room-darkening shades</ul>
+              <Divider />
+              <ul className={classes.ulText}>Bed linens</ul>
+              <Divider />
+              <ul className={classes.ulText}>Extra pillows and blankets</ul>
+              <Divider />
+              <ul className={classes.ulText}>Shampoo</ul>
+            </div>
           </Modal>
         </Grid>
       </div>
