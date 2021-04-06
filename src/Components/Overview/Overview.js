@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 import { Grid, makeStyles, ThemeProvider, Typography } from '@material-ui/core';
 import PeopleOutlinedIcon from '@material-ui/icons/PeopleOutlined';
 import { theme } from '../../themes/themes';
 import KingBedOutlinedIcon from '@material-ui/icons/KingBedOutlined';
 import EmojiFoodBeverageOutlinedIcon from '@material-ui/icons/EmojiFoodBeverageOutlined';
-import BathtubOutlinedIcon from '@material-ui/icons/BathtubOutlined';
+// import BathtubOutlinedIcon from '@material-ui/icons/BathtubOutlined';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import FingerprintIcon from '@material-ui/icons/Fingerprint';
-import './Overview.scss'
+import './Overview.scss';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,9 +16,37 @@ const useStyles = makeStyles((theme) => ({
   grid: {
     display: 'flex',
     flexDirection: 'row',
-    alignContent: 'start',
-  }
-}))
+    alignContent: 'flex-start',
+    marginLeft: '4em',
+    marginRight: '4em',
+  },
+  subHeading: {
+    fontFamily: 'unquote',
+    fontSize: '58px',
+    display: 'flex',
+    alignContent: 'flex-start',
+    justifyContent: '',
+    marginLeft: '1em',
+    marginRight: '4em',
+    textTransform: 'bold',
+    textAlign: 'left',
+  },
+  rootText: {
+    display: 'flex',
+    alignContent: 'flex-start',
+    marginLeft: '4em',
+    marginRight: '4em',
+    fontFamily: 'unquote',
+    fontSize: '16',
+    textAlign: 'left',
+  },
+  subTitle: {
+    display: 'flex',
+    alignContent: 'flex-start',
+    marginLeft: '4em',
+    marginRight: '4em',
+  },
+}));
 
 const Overview = () => {
   const classes = useStyles();
@@ -27,7 +55,9 @@ const Overview = () => {
     <ThemeProvider theme={theme}>
       <Grid container></Grid>
       <div>
-        <Typography variant='h4'>Loft</Typography>
+        <Typography variant='headline1' className={classes.subHeading}>
+          Loft
+        </Typography>
         <Grid item className={classes.grid}>
           <HomeOutlinedIcon />
           Entire House
@@ -40,7 +70,7 @@ const Overview = () => {
           <EmojiFoodBeverageOutlinedIcon />
           Full kitchen
         </Grid>
-        <p>
+        <p className={classes.rootText}>
           The Bird House is a completely private studio with everything you
           need! With no shared spaces or walls, a large private deck with
           beautiful scenery, this is the perfect place to unwind after a day of
@@ -50,9 +80,13 @@ const Overview = () => {
           stunning bathroom with 2 shower heads will leave you refreshed, never
           wanting to leave!
         </p>
-        <Typography variant='h6'>The space</Typography>
-        <p>Welcome to the Bird House! We can not wait to have you stay!</p>
-        <p>
+        <Typography variant='h6' className={classes.subTitle}>
+          The space
+        </Typography>
+        <p className={classes.rootText}>
+          Welcome to the Bird House! We can not wait to have you stay!
+        </p>
+        <p className={classes.rootText}>
           The Bird House is a studio style living arrangement, above a detached
           garage, that we designed with comfort and convenience in mind. You
           will find everything you need for a couple nights or several months in
@@ -63,8 +97,10 @@ const Overview = () => {
           walking in. Inside you will be greeted by beautiful new, modern
           finishes and you will immediately feel at home!
         </p>
-        <Typography variant='h6'>Kitchen</Typography>
-        <p>
+        <Typography variant='h6' className={classes.subTitle}>
+          Kitchen
+        </Typography>
+        <p className={classes.rootText}>
           One of our guest favorite amenity is the kitchen. You will find a
           full-size refrigerator, 2 burner electric cooktop, a convection
           microwave (we do not have a traditional oven, but the microwave can
@@ -75,8 +111,10 @@ const Overview = () => {
           cups, silverware, knives, cooking utensils, toaster and a Britta
           purified water pitcher.
         </p>
-        <Typography variant='h6'>Living Room</Typography>
-        <p>
+        <Typography variant='h6' className={classes.subTitle}>
+          Living Room
+        </Typography>
+        <p className={classes.rootText}>
           Weather you plan to be out exploring for most of your stay, or you
           just want a place to relax and escape the world you will enjoy the
           entertainment provided in the Bird House. You will find a comfy sofa
@@ -89,8 +127,10 @@ const Overview = () => {
           evening? Turn on the electric fireplace, with or without the heat, and
           enjoy the ambiance.
         </p>
-        <Typography variant='h6'>Sleeping</Typography>
-        <p>
+        <Typography variant='h6' className={classes.subTitle}>
+          Sleeping
+        </Typography>
+        <p className={classes.rootText}>
           The main bed is a very comfy queen mattress on a custom murphy bed.
           The murphy bed is designed to fold up to make more space if needed. No
           expense was spared with the sleeping arrangements as a good night
@@ -102,14 +142,18 @@ const Overview = () => {
           exhausted in the evening, and the beds were so comfy - even the sofa
           sleeper!)
         </p>
-        <Typography variant='h6'>Bathroom</Typography>
-        <p>
+        <Typography variant='h6' className={classes.subTitle}>
+          Bathroom
+        </Typography>
+        <p className={classes.rootText}>
           The bathroom is a small, but a stunning ¾ bath (no bathtub). The
           shower has both a traditional shower head and a rain shower head that
           can be controlled independently for ultimate comfort.
         </p>
-        <Typography variant='h6'>Outdoor Space</Typography>
-        <p>
+        <Typography variant='h6' className={classes.subTitle}>
+          Outdoor Space
+        </Typography>
+        <p className={classes.rootText}>
           Walk out the French doors onto a beautiful and peaceful deck. At over
           20’ wide you will find a table for 4 to enjoy a peaceful meal, a sofa
           to relax while drinking your morning coffee and watch the sun rise
@@ -121,8 +165,10 @@ const Overview = () => {
           Rocky Mountains from the lake are amazing! This is by far my favorite
           part of our place, enjoying the scenery and fresh air!
         </p>
-        <Typography variant='h6'>Other things to know</Typography>
-        <p>
+        <Typography variant='h6' className={classes.subTitle}>
+          Other things to know
+        </Typography>
+        <p className={classes.rootText}>
           You will also find an all in one washer and dryer in the walk-in
           closet making long term stays very convenient. No need to move from
           the washer to the dryer, this one machine does both! 420 Friendly –
@@ -152,6 +198,6 @@ const Overview = () => {
       </div>
     </ThemeProvider>
   );
-}
+};
 
 export default Overview;
