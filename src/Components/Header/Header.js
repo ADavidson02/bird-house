@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { withRouter } from 'react-router-dom'
+import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {
   AppBar,
@@ -18,10 +18,12 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     textAlign: 'left',
     elevation: 0,
+    maxWidth: '100%',
+    overflowX: 'hidden',
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    color: 'teal'
+    color: 'teal',
   },
   title: { flexGrow: 1, color: 'teal' },
   headerOptions: { margin: '0 10px' },
@@ -85,12 +87,9 @@ const Header = (props) => {
 
   return (
     <div className={classes.root}>
-      <AppBar position='static' elevation={0} marginBottom="1em">
+      <AppBar position='static' elevation={0} marginBottom='1em'>
         <Toolbar style={{ background: 'white' }}>
-          <Typography
-            variant='h6'
-            className={classes.title}
-          >
+          <Typography variant='h6' className={classes.title}>
             Birdhouse
           </Typography>
           <div>
@@ -125,7 +124,6 @@ const Header = (props) => {
                       <MenuItem
                         key={menuItem.menuTitle}
                         onClick={() => handleMenuClick(menuItem.pageURL)}
-                        
                       >
                         {menuItem.menuTitle}
                       </MenuItem>
@@ -141,7 +139,7 @@ const Header = (props) => {
                       data-testid={menuItem.menuTitle}
                       key={menuItem.menuTitle}
                       onClick={() => handleMenuClick(menuItem.pageURL)}
-                      style={{color: 'primary', textSizeAdjust: 'small'}}
+                      style={{ color: 'primary', textSizeAdjust: 'small' }}
                     >
                       {menuItem.menuTitle}
                     </Button>
