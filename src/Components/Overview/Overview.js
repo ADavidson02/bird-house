@@ -7,6 +7,7 @@ import EmojiFoodBeverageOutlinedIcon from '@material-ui/icons/EmojiFoodBeverageO
 import BathtubOutlinedIcon from '@material-ui/icons/BathtubOutlined';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import FingerprintIcon from '@material-ui/icons/Fingerprint';
+import './Overview.scss'
 
 const useStyles = makeStyles((theme) => ({
   root: {
