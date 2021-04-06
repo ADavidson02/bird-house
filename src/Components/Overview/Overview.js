@@ -16,8 +16,6 @@ import FireplaceOutlinedIcon from '@material-ui/icons/FireplaceOutlined';
 import LocalLaundryServiceOutlinedIcon from '@material-ui/icons/LocalLaundryServiceOutlined';
 import WifiOutlinedIcon from '@material-ui/icons/WifiOutlined';
 import KitchenOutlinedIcon from '@material-ui/icons/KitchenOutlined';
-import Modal from '@material-ui/core/Modal';
-import Dialog from '@material-ui/core/Dialog';
 import Divider from '@material-ui/core/Divider';
 import './Overview.scss';
 
@@ -29,18 +27,19 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     alignContent: 'flex-start',
-    marginLeft: '4em',
+    marginLeft: '2em',
     marginRight: '2em',
+    padding: '1em',
+    fontSize: '13px'
   },
   subHeading: {
     fontFamily: 'unquote',
     fontSize: '58px',
     display: 'flex',
     alignContent: 'flex-start',
-
     marginLeft: '1em',
     marginRight: '4em',
-    textTransform: 'bold',
+    fontWeight: 'bold',
     textAlign: 'left',
   },
   rootText: {
@@ -60,58 +59,48 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '3em',
     marginRight: '2em',
     padding: '.5em',
+    fontWeight: 'bold'
   },
   sectionHeader: {
     fontFamily: 'unquote',
-    fontSize: '47px',
+    fontSize: '28px',
+    display: 'flex',
+    alignContent: 'flex-start',
+    marginLeft: '1em',
+    marginRight: '2em',
+    fontWeight: 'bold',
+    textAlign: 'left',
+  },
+
+  ulText: {
+    display: 'flex',
+    alignContent: 'flex-start',
+    marginRight: '2em',
+    fontFamily: 'unquote',
+    fontSize: '14',
+    textAlign: 'left',
+  },
+  ulHeader: {
+    fontFamily: 'unquote',
+    fontSize: '16px',
     display: 'flex',
     alignContent: 'flex-start',
     marginLeft: '1em',
     marginRight: '2em',
     textTransform: 'bold',
     textAlign: 'left',
-  },
-  modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    overflow: 'scroll',
-  },
-  paper: {
-    backgroundColor: theme.palette.background.paper,
-    borderRadius: '30px',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-    width: 'fit-content',
-    margin: '5em'
-  },
-  ulText: {
-    display: 'flex',
-    alignContent: 'flex-start',
-    marginRight: '2em',
-    fontFamily: 'unquote',
-    fontSize: '16',
-    textAlign: 'left',
-  },
+    fontWeight: 'bold'
+  }
 }));
 
 const Overview = () => {
   const classes = useStyles();
-  const [open, setOpen] = useState(false)
 
-    const handleOpen = () => {
-      setOpen(true);
-    };
-
-    const handleClose = () => {
-      setOpen(false);
-    };
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container></Grid>
       <div>
-        <Typography variant='headline1' className={classes.subHeading}>
+        <Typography variant='h4' className={classes.sectionHeader}>
           Loft
         </Typography>
         <Grid item className={classes.grid}>
@@ -252,96 +241,115 @@ const Overview = () => {
           hesitate to reach out with any additional questions!
         </p>
         <Divider />
-        <Typography variant='h5' className={classes.sectionHeader}>
-          Amenities
-        </Typography>
-        <Grid container col={2}>
-          <Grid item>
-            <WbSunnyOutlinedIcon />
-            Private Deck
+        <Grid item xl>
+          <Typography variant='h5' className={classes.sectionHeader}>
+            Amenities
+          </Typography>
+          <Grid container>
+            <Grid item xs>
+              Private Deck
+              <WbSunnyOutlinedIcon />
+            </Grid>
+            <Grid item xs>
+              Air conditioning
+              <AcUnitOutlinedIcon />
+            </Grid>
+            <Grid item xs>
+              50" HDTV
+              <TvOutlinedIcon />
+            </Grid>
+            <Grid item xs>
+              Free street parking
+              <LocalParkingOutlinedIcon />
+            </Grid>
+            <Grid item xs>
+              Indoor fireplace
+              <FireplaceOutlinedIcon />
+            </Grid>
+            <Grid item xs>
+              Washer/Dryer
+              <LocalLaundryServiceOutlinedIcon />
+            </Grid>
+            <Grid item>
+              Wifi
+              <WifiOutlinedIcon />
+            </Grid>
+            <Grid item xs>
+              Kitchen
+              <KitchenOutlinedIcon />
+            </Grid>
           </Grid>
-          <Grid item>
-            <AcUnitOutlinedIcon />
-            Air conditioning
-          </Grid>
-          <Grid item>
-            <TvOutlinedIcon />
-            50" HDTV with Amazon Prime Video, Netflix
-          </Grid>
-          <Grid item>
-            <LocalParkingOutlinedIcon />
-            Free street parking
-          </Grid>
-          <Grid item>
-            <FireplaceOutlinedIcon />
-            Indoor fireplace
-          </Grid>
-          <Grid item>
-            <LocalLaundryServiceOutlinedIcon />
-            Washer/Dryer
-          </Grid>
-          <Grid item>
-            <WifiOutlinedIcon />
-            Wifi
-          </Grid>
-          <Grid item>
-            <KitchenOutlinedIcon />
-            Kitchen
-          </Grid>
-          <Button onClick={handleOpen}>Open Modal</Button>
-          <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby='simple-modal-title'
-            aria-describedby='simple-modal-description'
-            style={{ overflow: 'scroll' }}
-          >
-            <div className={classes.paper}>
-              <Typography className={classes.subTitle}>Bathroom</Typography>
-              <ul className={classes.ulText}>Conditioner</ul>
-              <Divider />
-              <ul className={classes.ulText}>Cleaning products</ul>
-              <Divider />
-              <ul className={classes.ulText}>Shampoo</ul>
-              <Divider />
-              <ul className={classes.ulText}>Hair dryer</ul>
-              <Divider />
-              <ul className={classes.ulText}>Hot water</ul>
-              <Divider />
-              <ul className={classes.ulText}>Body soap</ul>
-              <Divider />
-              <Typography className={classes.subTitle}>
-                Bedroom and laundry
-              </Typography>
-              <ul className={classes.ulText}>
-                Clothing storage, dresser and walk-in closet
-              </ul>
-              <Divider />
-              <ul className={classes.ulText}>Washer</ul>
-              <Divider />
-              <ul className={classes.ulText}>Dryer</ul>
-              <Divider />
-              <ul className={classes.ulText}>Essentials:</ul>
-              <small
-                style={{ padding: theme.spacing(2, 4, 3) }}
-              >
-                Towels, bed sheets, soap, toilet paper
-              </small>
-              <Divider />
-              <ul className={classes.ulText}>Hangers</ul>
-              <Divider />
-              <ul className={classes.ulText}>Iron</ul>
-              <Divider />
-              <ul className={classes.ulText}>Room-darkening shades</ul>
-              <Divider />
-              <ul className={classes.ulText}>Bed linens</ul>
-              <Divider />
-              <ul className={classes.ulText}>Extra pillows and blankets</ul>
-              <Divider />
-              <ul className={classes.ulText}>Shampoo</ul>
-            </div>
-          </Modal>
+            <div>
+            <Grid container>
+              <Grid item xs={6} s={6} lg={4}>
+                <Typography className={classes.subTitle}>Bathroom</Typography>
+                <Divider />
+                <ul className={classes.ulText}>Conditioner</ul>
+                <ul className={classes.ulText}>Cleaning products</ul>
+                <ul className={classes.ulText}>Shampoo</ul>
+                <ul className={classes.ulText}>Hair dryer</ul>
+                <ul className={classes.ulText}>Hot water</ul>
+                <ul className={classes.ulText}>Body soap</ul>
+              </Grid>
+              <Grid item xs={6} s={6} lg={4}>
+                <Typography className={classes.subTitle}>
+                  Bedroom & laundry
+                </Typography>
+                <Divider />
+                <ul className={classes.ulText}>
+                  Clothing storage, dresser and walk-in closet
+                </ul>
+                <ul className={classes.ulText}>Washer</ul>
+                <ul className={classes.ulText}>Dryer</ul>
+                <ul className={classes.ulText}>Essentials:</ul>
+                <small style={{ padding: theme.spacing(2, 4, 3) }}>
+                  Towels, bed sheets, soap, toilet paper
+                </small>
+                <ul className={classes.ulText}>Hangers</ul>
+                <ul className={classes.ulText}>Iron</ul>
+                <ul className={classes.ulText}>Room-darkening shades</ul>
+                <ul className={classes.ulText}>Bed linens</ul>
+                <ul className={classes.ulText}>Extra pillows and blankets</ul>
+              </Grid>
+              <Grid item xs={6} s={6} lg={4}>
+                <Typography className={classes.subTitle}>
+                  Entertainment
+                </Typography>
+                <Divider />
+                <ul className={classes.ulText}>
+                  50" HDTV with Amazon Prime Video, Netflix
+                </ul>
+                <ul className={classes.ulText}>Game console: Xbox 360</ul>
+              </Grid>
+              <Grid item xs={6} s={6} lg={4}>
+                <Typography className={classes.subTitle}>Family</Typography>
+                <Divider />
+                <ul className={classes.ulText}>Board games</ul>
+                <ul className={classes.ulText}>Baby safety gates</ul>
+                <ul className={classes.ulText}>Pack 'n Play/travel crib</ul>
+                <ul className={classes.ulText}>Children's dinnerware</ul>
+              </Grid>
+              <Grid item xs={6} s={6} lg={4}>
+                <Typography className={classes.subTitle}>
+                  Heating and cooling
+                </Typography>
+                <Divider />
+                <ul className={classes.ulText}>Air conditioning</ul>
+                <ul className={classes.ulText}>Portable fan</ul>
+                <ul className={classes.ulText}>Ceiling fan</ul>
+                <ul className={classes.ulText}>Indoor fireplace</ul>
+                <ul className={classes.ulText}>Heating</ul>
+              </Grid>
+            </Grid>
+          </div>
         </Grid>
+        <Divider />
+        <Typography variant='h4' className={classes.sectionHeader}>
+          House Rules
+        </Typography>
+        <Typography variant='h4' className={classes.sectionHeader}>
+          Policy and Notes
+        </Typography>
       </div>
     </ThemeProvider>
   );
