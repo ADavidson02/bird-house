@@ -7,7 +7,16 @@ import EmojiFoodBeverageOutlinedIcon from '@material-ui/icons/EmojiFoodBeverageO
 // import BathtubOutlinedIcon from '@material-ui/icons/BathtubOutlined';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import FingerprintIcon from '@material-ui/icons/Fingerprint';
+import WbSunnyOutlinedIcon from '@material-ui/icons/WbSunnyOutlined';
+import AcUnitOutlinedIcon from '@material-ui/icons/AcUnitOutlined';
+import LocalParkingOutlinedIcon from '@material-ui/icons/LocalParkingOutlined';
+import TvOutlinedIcon from '@material-ui/icons/TvOutlined';
+import FireplaceOutlinedIcon from '@material-ui/icons/FireplaceOutlined';
+import LocalLaundryServiceOutlinedIcon from '@material-ui/icons/LocalLaundryServiceOutlined';
+import WifiOutlinedIcon from '@material-ui/icons/WifiOutlined';
+import KitchenOutlinedIcon from '@material-ui/icons/KitchenOutlined';
 import './Overview.scss';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '58px',
     display: 'flex',
     alignContent: 'flex-start',
-    justifyContent: '',
+
     marginLeft: '1em',
     marginRight: '4em',
     textTransform: 'bold',
@@ -45,6 +54,16 @@ const useStyles = makeStyles((theme) => ({
     alignContent: 'flex-start',
     marginLeft: '4em',
     marginRight: '4em',
+  },
+  sectionHeader: {
+    fontFamily: 'unquote',
+    fontSize: '47px',
+    display: 'flex',
+    alignContent: 'flex-start',
+    marginLeft: '1em',
+    marginRight: '4em',
+    textTransform: 'bold',
+    textAlign: 'left',
   },
 }));
 
@@ -195,6 +214,43 @@ const Overview = () => {
           children. Thanks for your interest in our place and please do not
           hesitate to reach out with any additional questions!
         </p>
+        <Typography variant='h5' className={classes.sectionHeader}>
+          Amenities
+        </Typography>
+        <Grid container col={2}>
+          <Grid item>
+            <WbSunnyOutlinedIcon />
+            Private Deck
+          </Grid>
+          <Grid item>
+            <AcUnitOutlinedIcon />
+            Air conditioning
+          </Grid>
+          <Grid item>
+            <TvOutlinedIcon />
+            50" HDTV with Amazon Prime Video, Netflix
+          </Grid>
+          <Grid item>
+            <LocalParkingOutlinedIcon />
+            Free street parking
+          </Grid>
+          <Grid item>
+            <FireplaceOutlinedIcon />
+            Indoor fireplace
+          </Grid>
+          <Grid item>
+            <LocalLaundryServiceOutlinedIcon />
+            Washer/Dryer
+          </Grid>
+          <Grid item>
+            <WifiOutlinedIcon />
+            Wifi
+          </Grid>
+          <Grid item>
+            <KitchenOutlinedIcon />
+            Kitchen
+          </Grid>
+        </Grid>
       </div>
     </ThemeProvider>
   );
