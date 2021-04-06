@@ -12,7 +12,6 @@ import {
   useMediaQuery,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import { MicNone, NoEncryption } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
