@@ -20,10 +20,6 @@ const Book = () => {
         >
           The Bird House of Frederick-Open Space &amp; Lake View
         </a>
-        <script
-          async=''
-          src='https://www.airbnb.com/calendar/ical/35343574.ics?s=549863931680e50cd7c73a638bba385a'
-        ></script>
       </div>
     </div>
   );}
