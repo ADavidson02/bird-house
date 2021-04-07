@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'teal',
   },
   title: { flexGrow: 1, color: 'teal' },
-  headerOptions: { margin: '0 10px' },
+  headerOptions: { margin: '0 10px', maxWidth: '100%' },
 }));
 
 const Header = (props) => {
