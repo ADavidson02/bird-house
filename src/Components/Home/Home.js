@@ -5,9 +5,7 @@ import { Paper, Typography } from '@material-ui/core';
 import { theme } from '../../themes/themes';
 import imageOne from '../../assets/bird-house-1.webp';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import {
-  MuiPickersUtilsProvider,
-} from '@material-ui/pickers';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import { DatePicker } from '@material-ui/pickers';
 
@@ -38,12 +36,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '1em',
     marginLeft: '1em',
     outline: '3px solid red',
-    // maxWidth: '100%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     zIndex: '1',
-    // direction: 'row'
   },
   image: {
     width: '30em',
