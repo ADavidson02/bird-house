@@ -26,7 +26,12 @@ const Map = () => {
         <Typography variant='h4'>Property</Typography>
         <Typography variant='h5'>Property Type</Typography>
         <p>Guesthouse</p>
-
+        <Typography variant='h5'>Guest Safety</Typography>
+        <p>Security cameras/audio recording devices</p>
+        <p>Carbon monoxide alarm</p>
+        <p>Smoke alarm</p>
+        <p>Must climb stairs</p>
+        <p>Pets live on property</p>
       </div>
     </div>
   );
