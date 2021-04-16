@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    padding: '.5em',
+    padding: '.25em',
   },
   subHeading: {
     fontFamily: 'unquote',
@@ -63,7 +63,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignContent: 'flex-start',
     marginLeft: '2em',
-    marginRight: '2em',
     fontWeight: 'bold',
   },
   sectionHeader: {
@@ -131,21 +130,25 @@ const Overview = () => {
         <Grid item className={classes.grid}>
           <div className={classes.gridIcon}>
             <HomeOutlinedIcon />
-            Entire House
+            <p style={{ marginRight: '1em' }}>Entire House</p>
           </div>
           <div className={classes.gridIcon}>
-            <PeopleOutlinedIcon />4 Guests
+            <PeopleOutlinedIcon />
+            <p style={{ marginRight: '1em' }}>4 Guests</p>
           </div>
           <div className={classes.gridIcon}>
-            <KingBedOutlinedIcon />2 beds
+            <KingBedOutlinedIcon style={{ fontWeight: 'lighter' }} />
+            <p style={{ marginRight: '1em' }}>2 beds</p>
           </div>
           <div className={classes.gridIcon}>
             <FingerprintIcon />
-            Self check-in
+            <p style={{ marginRight: '1em' }}>Self check-in</p>
           </div>
           <div className={classes.gridIcon}>
             <EmojiFoodBeverageOutlinedIcon />
-            Full kitchen
+            <p style={{ marginRight: '1em', marginLeft: '.5em' }}>
+              Full kitchen
+            </p>
           </div>
         </Grid>
         <Grid container>
@@ -495,7 +498,9 @@ const Overview = () => {
               <Typography className={classes.subTitle}>
                 Entertainment
               </Typography>
-              <ul className={classes.ulText}>50" HDTV with: Amazon Prime Video, Netflix, Disney+ </ul>
+              <ul className={classes.ulText}>
+                50" HDTV with: Amazon Prime Video, Netflix, Disney+{' '}
+              </ul>
               <ul className={classes.ulText}>Game console: Xbox 360</ul>
             </Grid>
             <Grid item xs={6} s={6} md={4} lg={2} xl={2}>
