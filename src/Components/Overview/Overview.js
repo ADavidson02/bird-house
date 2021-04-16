@@ -90,6 +90,26 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     fontWeight: 'bold',
   },
+  amenitiesList: {
+    display: 'grid',
+    flexDirection: 'column',
+    justify: 'center',
+    margin: '1px',
+    padding: '1em',
+  },
+  amenitieIteam: {
+    margin: '1px',
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: '3px',
+    marginRight: '3px',
+  },
+  amenitiesIcon: {
+    margin: '1px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignContent: 'center'
+  },
 }));
 
 const Overview = () => {
@@ -98,6 +118,7 @@ const Overview = () => {
   return (
     <ThemeProvider theme={theme}>
       <div>
+        <p>Picture</p>
         <Typography variant='h4' className={classes.sectionHeader}>
           Loft
         </Typography>
@@ -252,98 +273,182 @@ const Overview = () => {
         <Divider />
         <Grid container style={{ margin: '1em' }}>
           <Grid item xs={12}>
-          <Typography variant='h5' className={classes.sectionHeader}>
-            Amenities
-          </Typography>
+            <Typography variant='h5' className={classes.sectionHeader}>
+              Amenities
+            </Typography>
           </Grid>
-          <Grid
-            item
-            xs={3}
-            s={3}
-            md={2}
-            lg={1}
-            xl={1}
-            style={{ margin: '1px' }}
-          >
-            Private Deck
-            <WbSunnyOutlinedIcon />
-          </Grid>
-          <Grid
-            item
-            xs={3}
-            s={3}
-            md={2}
-            lg={1}
-            xl={1}
-            style={{ margin: '1px' }}
-          >
-            Air conditioning
-            <AcUnitOutlinedIcon />
-          </Grid>
-          <Grid
-            item
-            xs={3}
-            s={3}
-            md={2}
-            lg={1}
-            xl={1}
-            style={{ margin: '1px' }}
-          >
-            50" HDTV
-            <TvOutlinedIcon />
-          </Grid>
-          <Grid
-            item
-            xs={3}
-            s={3}
-            md={2}
-            lg={1}
-            xl={1}
-            style={{ margin: '1px' }}
-          >
-            Free street parking
-            <LocalParkingOutlinedIcon />
-          </Grid>
+          <div className={classes.amenitiesList}>
+            <Grid
+              item
+              xs={3}
+              s={3}
+              md={2}
+              lg={1}
+              xl={1}
+              className={classes.amenitieIteam}
+            >
+              Private Deck
+            </Grid>
+            <Grid
+              item
+              xs={3}
+              s={3}
+              md={2}
+              lg={1}
+              xl={1}
+              className={classes.amenitiesIcon}
+            >
+              <WbSunnyOutlinedIcon />
+            </Grid>
+          </div>
+          <div className={classes.amenitiesList}>
+            <Grid
+              item
+              xs={3}
+              s={3}
+              md={2}
+              lg={1}
+              xl={1}
+              className={classes.amenitieIteam}
+            >
+              Air conditioning
+            </Grid>
+            <Grid
+              item
+              xs={3}
+              s={3}
+              md={2}
+              lg={1}
+              xl={1}
+              className={classes.amenitiesIcon}
+            >
+              <AcUnitOutlinedIcon />
+            </Grid>
+          </div>
+          <div className={classes.amenitiesList}>
+            <Grid
+              item
+              xs={3}
+              s={3}
+              md={2}
+              lg={1}
+              xl={1}
+              className={classes.amenitieIteam}
+            >
+              50" HDTV
+            </Grid>
+            <Grid
+              item
+              xs={3}
+              s={3}
+              md={2}
+              lg={1}
+              xl={1}
+              className={classes.amenitiesIcon}
+            >
+              <TvOutlinedIcon />
+            </Grid>
+          </div>
+          <div className={classes.amenitiesList}>
+            <Grid
+              item
+              xs={3}
+              s={3}
+              md={2}
+              lg={1}
+              xl={1}
+              className={classes.amenitieIteam}
+            >
+              Free parking
+            </Grid>
+            <Grid
+              item
+              xs={3}
+              s={3}
+              md={2}
+              lg={1}
+              xl={1}
+              className={classes.amenitiesIcon}
+            >
+              <LocalParkingOutlinedIcon />
+            </Grid>
+          </div>
           {/* <Grid item xs>
             Indoor fireplace
             <FireplaceOutlinedIcon />
           </Grid> */}
-          <Grid
-            item
-            xs={3}
-            s={3}
-            md={2}
-            lg={1}
-            xl={1}
-            style={{ margin: '2px' }}
-          >
-            Washer/Dryer
-            <LocalLaundryServiceOutlinedIcon />
-          </Grid>
-          <Grid
-            item
-            xs={3}
-            s={3}
-            md={2}
-            lg={1}
-            xl={1}
-            style={{ margin: '1px' }}
-          >
-            Wifi
-            <WifiOutlinedIcon />
-          </Grid>
-          <Grid
-            item
-            xs={3}
-            s={3}
-            md={2}
-            lg={1}
-            xl={1}
-            style={{ margin: '1px' }}
-          >
-            Kitchen
-            <KitchenOutlinedIcon />
-          </Grid>
+          <div className={classes.amenitiesList}>
+            <Grid
+              item
+              xs={3}
+              s={3}
+              md={2}
+              lg={1}
+              xl={1}
+              className={classes.amenitiesIteam}
+            >
+              Washer/Dryer
+            </Grid>
+            <Grid
+              item
+              xs={3}
+              s={3}
+              md={2}
+              lg={1}
+              xl={1}
+              className={classes.amenitiesIcon}
+            >
+              <LocalLaundryServiceOutlinedIcon />
+            </Grid>
+          </div>
+          <div className={classes.amenitiesList}>
+            <Grid
+              item
+              xs={3}
+              s={3}
+              md={2}
+              lg={1}
+              xl={1}
+              className={classes.amenitieIteam}
+            >
+              Wifi
+            </Grid>
+            <Grid
+              item
+              xs={3}
+              s={3}
+              md={2}
+              lg={1}
+              xl={1}
+              className={classes.amenitiesIcon}
+            >
+              <WifiOutlinedIcon />
+            </Grid>
+          </div>
+          <div className={classes.amenitiesList}>
+            <Grid
+              item
+              xs={3}
+              s={3}
+              md={2}
+              lg={1}
+              xl={1}
+              className={classes.amenitieIteam}
+            >
+              Kitchen
+            </Grid>
+            <Grid
+              item
+              xs={3}
+              s={3}
+              md={2}
+              lg={1}
+              xl={1}
+              className={classes.amenitiesIcon}
+            >
+              <KitchenOutlinedIcon />
+            </Grid>
+          </div>
         </Grid>
         <div>
           <Grid container>
@@ -407,9 +512,9 @@ const Overview = () => {
         </div>
         <Divider />
         <p>
-        <Typography variant='h4' className={classes.sectionHeader}>
-          House Rules
-        </Typography>
+          <Typography variant='h4' className={classes.sectionHeader}>
+            House Rules
+          </Typography>
         </p>
         <Divider />
         <Typography variant='h4' className={classes.sectionHeader}>
