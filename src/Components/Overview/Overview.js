@@ -32,6 +32,12 @@ const useStyles = makeStyles((theme) => ({
     padding: '1em',
     fontSize: '13px',
   },
+  gridIcon: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: '.5em',
+  },
   subHeading: {
     fontFamily: 'unquote',
     fontSize: '58px',
@@ -108,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
     margin: '1px',
     display: 'flex',
     flexDirection: 'column',
-    alignContent: 'center'
+    alignContent: 'center',
   },
 }));
 
@@ -123,16 +129,24 @@ const Overview = () => {
           Loft
         </Typography>
         <Grid item className={classes.grid}>
-          <HomeOutlinedIcon />
-          Entire House
-          <PeopleOutlinedIcon />
-          4 Guests
-          <KingBedOutlinedIcon />
-          2 beds
-          <FingerprintIcon />
-          Self check-in
-          <EmojiFoodBeverageOutlinedIcon />
-          Full kitchen
+          <div className={classes.gridIcon}>
+            <HomeOutlinedIcon />
+            Entire House
+          </div>
+          <div className={classes.gridIcon}>
+            <PeopleOutlinedIcon />4 Guests
+          </div>
+          <div className={classes.gridIcon}>
+            <KingBedOutlinedIcon />2 beds
+          </div>
+          <div className={classes.gridIcon}>
+            <FingerprintIcon />
+            Self check-in
+          </div>
+          <div className={classes.gridIcon}>
+            <EmojiFoodBeverageOutlinedIcon />
+            Full kitchen
+          </div>
         </Grid>
         <Grid container>
           <Grid item>
@@ -452,7 +466,7 @@ const Overview = () => {
         </Grid>
         <div>
           <Grid container>
-            <Grid item xs={6} s={6} md={4} lg={3}>
+            <Grid item xs={6} s={6} md={4} lg={2} xl={2}>
               <Typography className={classes.subTitle}>Bathroom</Typography>
               <ul className={classes.ulText}>Conditioner</ul>
               <ul className={classes.ulText}>Cleaning products</ul>
@@ -462,7 +476,7 @@ const Overview = () => {
               <ul className={classes.ulText}>Body soap</ul>
               <ul className={classes.ulText}>Towels</ul>
             </Grid>
-            <Grid item xs={6} s={6} md={4} lg={3}>
+            <Grid item xs={6} s={6} md={4} lg={2} xl={2}>
               <Typography className={classes.subTitle}>
                 Bedroom & Laundry
               </Typography>
@@ -477,19 +491,14 @@ const Overview = () => {
               <ul className={classes.ulText}>Bed linens</ul>
               <ul className={classes.ulText}>Extra pillows and blankets</ul>
             </Grid>
-            <Grid item xs={6} s={6} md={4} lg={3}>
+            <Grid item xs={6} s={6} md={4} lg={2} xl={2}>
               <Typography className={classes.subTitle}>
                 Entertainment
               </Typography>
-              <ul className={classes.ulText}>50" HDTV with</ul>
-              <ul>
-                <li>Amazon Prime Video </li>
-                <li>Netflix </li>
-                <li>Disney+ </li>
-              </ul>
+              <ul className={classes.ulText}>50" HDTV with: Amazon Prime Video, Netflix, Disney+ </ul>
               <ul className={classes.ulText}>Game console: Xbox 360</ul>
             </Grid>
-            <Grid item xs={6} s={6} md={4} lg={3}>
+            <Grid item xs={6} s={6} md={4} lg={2} xl={2}>
               <Typography className={classes.subTitle}>Family</Typography>
 
               <ul className={classes.ulText}>Board games</ul>
@@ -497,7 +506,7 @@ const Overview = () => {
               <ul className={classes.ulText}>Pack 'n Play/travel crib</ul>
               <ul className={classes.ulText}>Children's dinnerware</ul>
             </Grid>
-            <Grid item xs={6} s={6} md={4} lg={3}>
+            <Grid item xs={6} s={6} md={4} lg={2} xl={2}>
               <Typography className={classes.subTitle}>
                 Heating and cooling
               </Typography>
