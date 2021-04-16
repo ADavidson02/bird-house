@@ -4,11 +4,8 @@ import Button from '@material-ui/core/Button';
 import { Paper, Typography } from '@material-ui/core';
 import { theme } from '../../themes/themes';
 import imageOne from '../../assets/bird-house-1.webp';
-
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import {
-  MuiPickersUtilsProvider,
-} from '@material-ui/pickers';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import { DatePicker } from '@material-ui/pickers';
 
@@ -39,12 +36,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '1em',
     marginLeft: '1em',
     outline: '3px solid red',
-    // maxWidth: '100%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     zIndex: '1',
-    // direction: 'row'
   },
   image: {
     width: '30em',
@@ -102,6 +97,7 @@ const Home = (props) => {
           <img
             src={imageOne}
             style={{ borderRadius: '.5125em', width: '40em', height: '40em' }}
+            alt='inside space'
           />
           <Grid container>
             <Grid item xs={12}>
@@ -158,7 +154,7 @@ const Home = (props) => {
       <Grid container spacing={2} className={classes.ui}>
         <Grid item xs={5}>
           <Paper elevation={0} className={classes.paper}>
-            <img src={imageOne} className={classes.image} />
+            <img src={imageOne} className={classes.image} alt='sample 1' />
           </Paper>
         </Grid>
         <Grid item xs={5}>
@@ -170,7 +166,7 @@ const Home = (props) => {
       <Grid container spacing={2} className={classes.ui}>
         <Grid item xs={5}>
           <Paper elevation={0} className={classes.paper}>
-            <img src={imageOne} className={classes.image} />
+            <img src={imageOne} className={classes.image} alt='sample 2'/>
           </Paper>
         </Grid>
         <Grid item xs={5}>
