@@ -32,6 +32,19 @@ const Map = () => {
         <p>Smoke alarm</p>
         <p>Must climb stairs</p>
         <p>Pets live on property</p>
+        <div>
+          <iframe
+            src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d48810.50443357659!2d-104.93981834001048!3d40.12765730066404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1618595777154!5m2!1sen!2sus'
+            style={{
+              border: '0',
+              width: '600px',
+              height: '450px',
+              marginBottom: '6em',
+            }}
+            allowfullscreen=''
+            loading='lazy'
+          ></iframe>
+        </div>
       </div>
     </div>
   );
