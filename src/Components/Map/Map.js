@@ -23,6 +23,9 @@ const Map = () => {
           Our home is not walkable to restaurants and bars, a car is
           recommended. Plenty of street parking is available.
         </p>
+        <Typography variant='h4'>Property</Typography>
+        <Typography variant='h5'>Property Type</Typography>
+        <p>Guesthouse</p>
 
       </div>
     </div>
