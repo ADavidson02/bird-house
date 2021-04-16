@@ -18,6 +18,12 @@ const Map = () => {
           including walking to the lake, accessible from the backyard it is a
           beautiful place to stay!
         </p>
+        <Typography variant='h5'>Getting around</Typography>
+        <p>
+          Our home is not walkable to restaurants and bars, a car is
+          recommended. Plenty of street parking is available.
+        </p>
+
       </div>
     </div>
   );
