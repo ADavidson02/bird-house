@@ -38,16 +38,16 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     padding: '.25em',
   },
-  subHeading: {
-    fontFamily: 'unquote',
-    fontSize: '58px',
-    display: 'flex',
-    alignContent: 'flex-start',
-    marginLeft: '1em',
-    marginRight: '4em',
-    fontWeight: 'bold',
-    textAlign: 'left',
-  },
+  // subHeading: {
+  //   fontFamily: 'unquote',
+  //   fontSize: '58px',
+  //   display: 'flex',
+  //   alignContent: 'flex-start',
+  //   marginLeft: '1em',
+  //   marginRight: '4em',
+  //   fontWeight: 'bold',
+  //   textAlign: 'left',
+  // },
   rootText: {
     display: 'flex-box',
     alignContent: 'flex-start',
@@ -56,14 +56,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'unquote',
     fontSize: '16',
     textAlign: 'left',
-  },
-  subTitle: {
-    fontFamily: 'unquote',
-    fontSize: '19px',
-    display: 'flex',
-    alignContent: 'flex-start',
-    marginLeft: '2em',
-    fontWeight: 'bold',
   },
   sectionHeader: {
     fontFamily: 'unquote',
@@ -75,7 +67,14 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     textAlign: 'left',
   },
-
+  subTitle: {
+    fontFamily: 'unquote',
+    fontSize: '19px',
+    display: 'flex',
+    alignContent: 'flex-start',
+    marginLeft: '2em',
+    fontWeight: 'bold',
+  },
   ulText: {
     display: 'flex',
     alignContent: 'flex-start',
@@ -119,6 +118,16 @@ const useStyles = makeStyles((theme) => ({
 
 const Overview = () => {
   const classes = useStyles();
+
+  const intro = `The Bird House is a completely private studio with everything you
+              need! With no shared spaces or walls, a large private deck with
+              beautiful scenery, this is the perfect place to unwind after a day
+              of exploring! Or cuddle up with the elegant electric fireplace,
+              and watch your favorite streaming services on a 50" TV and just
+              stay in and relax. The modern kitchen makes cooking simple &
+              convenient and the stunning bathroom with 2 shower heads will
+              leave you refreshed, never wanting to leave!`;
+
   const kitchenBlurb = `One of our guest favorite amenity is the kitchen. You will find a
               full-size refrigerator, 2 burner electric cooktop, a convection
               microwave (we do not have a traditional oven, but the microwave
@@ -162,6 +171,7 @@ const Overview = () => {
             themselves and the mattresses are always very important. (From
             Leslie, we were exhausted in the evening, and the beds were so comfy
             - even the sofa sleeper!)`
+            
   const bathroomBlurb = `The bathroom is a small, but a stunning ¾ bath (no bathtub). The
             shower has both a traditional shower head and a rain shower head
             that can be controlled independently for ultimate comfort.`
@@ -240,14 +250,7 @@ const Overview = () => {
         <Grid container>
           <Grid item>
             <p className={classes.rootText}>
-              The Bird House is a completely private studio with everything you
-              need! With no shared spaces or walls, a large private deck with
-              beautiful scenery, this is the perfect place to unwind after a day
-              of exploring! Or cuddle up with the elegant electric fireplace,
-              and watch your favorite streaming services on a 50" TV and just
-              stay in and relax. The modern kitchen makes cooking simple &
-              convenient and the stunning bathroom with 2 shower heads will
-              leave you refreshed, never wanting to leave!
+              {intro}
             </p>
           </Grid>
           <Grid item>
