@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     elevation: 0,
     maxWidth: '100%',
     overflowX: 'hidden',
+    color: '#333'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -27,6 +28,12 @@ const useStyles = makeStyles((theme) => ({
   },
   title: { flexGrow: 1, color: 'teal' },
   headerOptions: { margin: '0 10px', maxWidth: '100%' },
+  buttons: {
+    '&:hover': {
+      textDecoration: 'underline',
+      color: 'teal'
+    }
+  },
 }));
 
 const Header = (props) => {
@@ -118,11 +125,13 @@ const Header = (props) => {
                   }}
                   open={open}
                   onClose={() => setAnchorEl(null)}
+                  className={classes.buttons}
                 >
                   {menuItems.map((menuItem) => {
                     return (
                       <MenuItem
                         key={menuItem.menuTitle}
+                        className={classes.buttons}
                         onClick={() => handleMenuClick(menuItem.pageURL)}
                       >
                         {menuItem.menuTitle}
@@ -136,6 +145,7 @@ const Header = (props) => {
                 {menuItems.map((menuItem) => {
                   return (
                     <Button
+                      className={classes.buttons}
                       data-testid={menuItem.menuTitle}
                       key={menuItem.menuTitle}
                       onClick={() => handleMenuClick(menuItem.pageURL)}
@@ -150,17 +160,6 @@ const Header = (props) => {
           </div>
         </Toolbar>
       </AppBar>
-      {!navigator.onLine && (
-        <div
-          style={{
-            textAlign: 'center',
-            background:
-              'linear-gradient(180deg, rgba(255,70,37,1) 0%, rgba(51,34,0,1) 100%)',
-          }}
-        >
-          <Typography>Currently Offline</Typography>
-        </div>
-      )}
     </div>
   );
 };
