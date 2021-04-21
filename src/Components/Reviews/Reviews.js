@@ -77,6 +77,33 @@ const Reviews = () => {
               </CardContent>
             </Card>
           </Grid>
+          <Grid item xs={12} s={6} md={4} l={3}>
+            <Card className={classes.cardRoot}>
+              <CardContent>
+                <Typography variant='h5' component='h2'>
+                  Jay
+                </Typography>
+                <StarIcon style={{ color: '#01579b' }}></StarIcon>
+                <StarIcon style={{ color: '#01579b' }}></StarIcon>
+                <StarIcon style={{ color: '#01579b' }}></StarIcon>
+                <StarIcon style={{ color: '#01579b' }}></StarIcon>
+                <StarIcon style={{ color: '#01579b' }}></StarIcon>
+                <Typography variant='body2' component='p'>
+                  The bird house was a really great place for us to vacation! We
+                  stayed about a week. Could not have asked for a better place.
+                  The kitchen was stocked very well with spices and
+                  pots/pans/spatulas/plates/eating utensils. Place was sparkling
+                  clean when we arrived and responses were quick from the host.
+                  Lots of entertainment on the TV (Xbox,Netflix,Disney+). The
+                  balcony was great for eating outside and star gazing! For the
+                  price point I don’t think there’s a better place out there;
+                  highly recommend if you’re wanting a place outside the city a
+                  bit and don’t mind driving some.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+
       </main>
     </div>
   );
