@@ -26,9 +26,10 @@ const useStyles = makeStyles((theme) => ({
   grid: {
     display: 'flex',
     flexDirection: 'row',
+    flexFlow: 'wrap',
+
     alignContent: 'flex-start',
-    marginLeft: '2em',
-    marginRight: '2em',
+
     padding: '1em',
     fontSize: '13px',
   },
