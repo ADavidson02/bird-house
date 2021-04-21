@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, makeStyles, ThemeProvider, Typography } from '@material-ui/core';
+import { Grid, makeStyles, ThemeProvider, Typography, GridList, GridListTile } from '@material-ui/core';
 import PeopleOutlinedIcon from '@material-ui/icons/PeopleOutlined';
 import { theme } from '../../themes/themes';
 import KingBedOutlinedIcon from '@material-ui/icons/KingBedOutlined';
@@ -18,6 +18,8 @@ import WifiOutlinedIcon from '@material-ui/icons/WifiOutlined';
 import KitchenOutlinedIcon from '@material-ui/icons/KitchenOutlined';
 import Divider from '@material-ui/core/Divider';
 import './Overview.scss';
+import imageOne from '../../assets/bird-house-1.webp';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -114,6 +116,12 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignContent: 'center',
+  },
+  gridList: {
+    width: '600',
+    height: '450',
+    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+    transform: 'translateZ(0)',
   },
 }));
 
@@ -220,7 +228,25 @@ const Overview = () => {
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <p>Picture</p>
+        <GridList cellHeight={200} spacing={1} className={classes.gridList}>
+          <GridListTile
+            cols={2}
+            rows={2}
+            style={{ zIndex: 0, borderRadius: '5px' }}
+          >
+            <img
+              src={imageOne}
+              style={{
+                borderRadius: '1em',
+                //   width: '40em',
+                //   height: '40em',
+                //   zIndex: 0,
+              }}
+              alt='inside space'
+              position='relative'
+            />
+          </GridListTile>
+        </GridList>
         <Typography variant='h4' className={classes.sectionHeader}>
           Loft
         </Typography>
@@ -250,9 +276,7 @@ const Overview = () => {
         </Grid>
         <Grid container>
           <Grid item>
-            <p className={classes.rootText}>
-              {intro}
-            </p>
+            <p className={classes.rootText}>{intro}</p>
           </Grid>
           <Grid item>
             <Typography variant='h6' className={classes.subTitle}>
@@ -261,48 +285,34 @@ const Overview = () => {
             <p className={classes.rootText}>
               Welcome to the Bird House! We can not wait to have you stay!
             </p>
-            <p className={classes.rootText}>
-              {spaceBulrb}
-            </p>
+            <p className={classes.rootText}>{spaceBulrb}</p>
           </Grid>
           <Grid item>
             <Typography variant='h6' className={classes.subTitle}>
               Kitchen
             </Typography>
-            <p className={classes.rootText}>
-              {kitchenBlurb}
-            </p>
+            <p className={classes.rootText}>{kitchenBlurb}</p>
           </Grid>
           <Typography variant='h6' className={classes.subTitle}>
             Living Room
           </Typography>
-          <p className={classes.rootText}>
-            {livingRoomBlurb}
-          </p>
+          <p className={classes.rootText}>{livingRoomBlurb}</p>
           <Typography variant='h6' className={classes.subTitle}>
             Sleeping
           </Typography>
-          <p className={classes.rootText}>
-            {sleepingBlurb}
-          </p>
+          <p className={classes.rootText}>{sleepingBlurb}</p>
           <Typography variant='h6' className={classes.subTitle}>
             Bathroom
           </Typography>
-          <p className={classes.rootText}>
-            {bathroomBlurb}
-          </p>
+          <p className={classes.rootText}>{bathroomBlurb}</p>
           <Typography variant='h6' className={classes.subTitle}>
             Outdoor Space
           </Typography>
-          <p className={classes.rootText}>
-            {outdoorBlurb}
-          </p>
+          <p className={classes.rootText}>{outdoorBlurb}</p>
           <Typography variant='h6' className={classes.subTitle}>
             Other things to know
           </Typography>
-          <p className={classes.rootText}>
-            {otherThingsBlurb}
-          </p>
+          <p className={classes.rootText}>{otherThingsBlurb}</p>
         </Grid>
         <Divider />
         <Grid container style={{ margin: '1em' }}>
