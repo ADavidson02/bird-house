@@ -1,6 +1,5 @@
-import { makeStyles, Typography } from '@material-ui/core';
+import { makeStyles, Typography, Grid } from '@material-ui/core';
 import React from 'react';
-import { theme } from '../../themes/themes';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   //   fontWeight: 'bold',
   //   textAlign: 'left',
   // },
-    subTitle: {
+  subTitle: {
     fontFamily: 'unquote',
     fontSize: '19px',
     display: 'flex',
@@ -52,7 +51,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
   },
 }));
-
 
 const Map = () => {
   const classes = useStyles();
@@ -70,10 +68,7 @@ const Map = () => {
           including walking to the lake, accessible from the backyard it is a
           beautiful place to stay!
         </p>
-        <Typography
-          variant='h5'
-          className={classes.subTitle}
-        >
+        <Typography variant='h5' className={classes.subTitle}>
           Getting around
         </Typography>
         <p className={classes.rootText}>
@@ -97,19 +92,21 @@ const Map = () => {
         <p className={classes.rootText}>Smoke alarm</p>
         <p className={classes.rootText}>Must climb stairs</p>
         <p className={classes.rootText}>Pets live on property</p>
-        <div>
-          <iframe
-            src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d48810.50443357659!2d-104.93981834001048!3d40.12765730066404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1618595777154!5m2!1sen!2sus'
-            style={{
-              border: '0',
-              width: '600px',
-              height: '450px',
-              marginBottom: '6em',
-            }}
-            allowfullscreen=''
-            loading='lazy'
-          ></iframe>
-        </div>
+        <Grid container>
+          <Grid item xs={12} s={12}>
+            <iframe
+              src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d48810.50443357659!2d-104.93981834001048!3d40.12765730066404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1618595777154!5m2!1sen!2sus'
+              style={{
+                border: '0',
+                width: '600px',
+                height: '450px',
+                margin: '2em',
+              }}
+              allowfullscreen=''
+              loading='lazy'
+            ></iframe>
+          </Grid>
+        </Grid>
       </div>
     </div>
   );
