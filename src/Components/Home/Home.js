@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
   gridList: {
     width: '600',
@@ -46,14 +46,12 @@ const useStyles = makeStyles((theme) => ({
     zIndex: '1',
   },
   button: {
-    color: 'white',
-    backgroundColor: 'teal',
     justifyContent: 'center',
     alignItems: 'center',
     flexBasis: '0',
     margin: '0',
     '&:hover': {
-      backgroundColor: 'green',
+      backgroundColor: '#b2102f',
     },
   },
   ui: {
@@ -109,9 +107,6 @@ const Home = (props) => {
                 src={imageOne}
                 style={{
                   borderRadius: '1em',
-                  //   width: '40em',
-                  //   height: '40em',
-                  //   zIndex: 0,
                 }}
                 alt='inside space'
                 position='relative'
@@ -138,14 +133,7 @@ const Home = (props) => {
             </Grid>
             <Grid>
               <GridList spacing={1} cols={3}>
-                {/* <Grid
-              container
-              spacing={0}
-              className={classes.bar}
-              style={{ zIndex: 2 }}
-            > */}
                 <GridListTile cols={1}>
-                  {/* <Grid item xs={false}> */}
                   <DatePicker
                     disableToolbar
                     variant='outlined'
@@ -160,7 +148,6 @@ const Home = (props) => {
                     }}
                   />
                 </GridListTile>
-                {/* <Grid item> */}
                 <GridListTile cols={1}>
                   <DatePicker
                     disableToolbar
@@ -175,25 +162,24 @@ const Home = (props) => {
                       'aria-label': 'change depature date',
                     }}
                   />
-                  {/* </Grid> */}
                 </GridListTile>
-                {/* <Grid item> */}
+
                 <GridListTile cols={1}>
                   <Button
                     endIcon={<ArrowForwardIosIcon />}
+                    color='primary'
                     variant='contained'
                     onClick={(e) => handleBook(arrivalDate, departureDate)}
                     className={classes.button}
                   >
                     Book Now
                   </Button>
-                  {/* </Grid> */}
+                  {dateError && (
+                    <h3>Please make sure both fields have a date</h3>
+                  )}
                 </GridListTile>
               </GridList>
             </Grid>
-            {/* </Grid> */}
-            {/* </Grid> */}
-            {dateError && <h3>Please make sure both fields have a date</h3>}
           </Grid>
         </MuiPickersUtilsProvider>
         <Grid
@@ -203,8 +189,13 @@ const Home = (props) => {
             justifyContent: 'space-between',
           }}
         >
-          <GridList cellHeight={280} cols={2} spacing={4}>
-            <GridListTile cols={1} >
+          <GridList
+            cellHeight={280}
+            cols={2}
+            spacing={4}
+            style={{ marginBottom: '2em' }}
+          >
+            <GridListTile cols={1}>
               <img src={imageOne} className={classes.image} alt='sample 1' />
             </GridListTile>
             <GridListTile cols={1}>
@@ -217,7 +208,6 @@ const Home = (props) => {
             cellHeight={280}
             cols={2}
             spacing={4}
-            // style={{ display: 'flex' }}
           >
             <GridListTile cols={1} rows={1}>
               <img src={imageOne} className={classes.image} alt='sample 2' />
