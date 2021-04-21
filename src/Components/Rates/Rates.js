@@ -15,12 +15,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '16',
     textAlign: 'left',
   },
-  sectionHeader: {
+  pageTitle: {
     fontFamily: 'unquote',
     fontSize: '28px',
     display: 'flex',
     flexDirection: 'row',
-    marginLeft: '1em',
+    justifyContent: 'center',
     marginBottom: '.5em',
     fontWeight: 'bold',
     textAlign: 'left',
@@ -77,7 +77,7 @@ const Rates = () => {
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <Typography variant='h4' className={classes.sectionHeader}>
+        <Typography variant='h4' color='primary' className={classes.pageTitle}>
           Rates
         </Typography>
         <Typography variant='h6' className={classes.rootText}>
