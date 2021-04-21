@@ -60,12 +60,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '16',
     textAlign: 'left',
   },
-  sectionHeader: {
+  pageTitle: {
     fontFamily: 'unquote',
     fontSize: '28px',
     display: 'flex',
     flexDirection: 'row',
-    marginLeft: '1em',
+    justifyContent: 'center',
     marginBottom: '.5em',
     fontWeight: 'bold',
     textAlign: 'left',
@@ -247,8 +247,8 @@ const Overview = () => {
             />
           </GridListTile>
         </GridList>
-        <Typography variant='h4' className={classes.sectionHeader}>
-          Loft
+        <Typography variant='h4' className={classes.pageTitle} color='primary'>
+          Overview
         </Typography>
         <Grid item className={classes.grid}>
           <div className={classes.gridIcon}>
