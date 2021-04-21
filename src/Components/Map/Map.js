@@ -14,12 +14,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '16',
     textAlign: 'left',
   },
-  sectionHeader: {
+  pageTitle: {
     fontFamily: 'unquote',
     fontSize: '28px',
     display: 'flex',
     flexDirection: 'row',
-    marginLeft: '1em',
+    justifyContent: 'center',
     marginBottom: '.5em',
     fontWeight: 'bold',
     textAlign: 'left',
@@ -56,7 +56,7 @@ const Map = () => {
   const classes = useStyles();
   return (
     <div>
-      <Typography variant='h4' className={classes.sectionHeader}>
+      <Typography variant='h4' color='primary' className={classes.pageTitle}>
         Location
       </Typography>
       <div>
