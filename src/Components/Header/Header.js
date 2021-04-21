@@ -10,6 +10,7 @@ import {
   MenuItem,
   Menu,
   useMediaQuery,
+  ThemeProvider
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
@@ -20,19 +21,28 @@ const useStyles = makeStyles((theme) => ({
     elevation: 0,
     maxWidth: '100%',
     overflowX: 'hidden',
-    color: '#333'
+    color: '#333',
   },
   menuButton: {
     marginRight: theme.spacing(2),
     color: 'teal',
+    marginLeft: '4em'
   },
   title: { flexGrow: 1, color: 'teal' },
-  headerOptions: { margin: '0 10px', maxWidth: '100%' },
+  headerOptions: { margin: '0 10px'},
   buttons: {
     '&:hover': {
       textDecoration: 'underline',
-      color: 'teal'
-    }
+      color: 'teal',
+    },
+    '&:active': {
+      textDecoration: 'underline',
+      color: 'teal',
+    },
+    '&:after': {
+      textDecoration: 'underline',
+      color: 'teal',
+    },
   },
 }));
 
@@ -51,6 +61,7 @@ const Header = (props) => {
   const handleMenuClick = (routerURL) => {
     history.push(routerURL);
     setAnchorEl(null);
+   
   };
 
   const menuItems = [
@@ -93,74 +104,72 @@ const Header = (props) => {
   ];
 
   return (
-    <div className={classes.root}>
-      <AppBar position='static' elevation={0} marginBottom='1em'>
-        <Toolbar style={{ background: 'white' }}>
-          <Typography variant='h6' className={classes.title}>
-            Birdhouse
-          </Typography>
-          <div>
-            {isMobile ? (
-              <>
-                <IconButton
-                  edge='start'
-                  className={classes.menuButton}
-                  color='inherit'
-                  aria-label='menu'
-                  onClick={handleMenu}
-                >
-                  <MenuIcon />
-                </IconButton>
-                <Menu
-                  id='menu-appbar'
-                  anchorEl={anchorEl}
-                  anchorOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  open={open}
-                  onClose={() => setAnchorEl(null)}
-                  className={classes.buttons}
-                >
+      <div className={classes.root}>
+        <AppBar position='static' elevation={0}>
+          <Toolbar style={{ background: 'white'}}>
+            <Typography variant='h6' className={classes.title}>
+              Birdhouse
+            </Typography>
+            <div>
+              {isMobile ? (
+                <>
+                  <IconButton
+                    edge='start'
+                    className={classes.menuButton}
+                    color='inherit'
+                    aria-label='menu'
+                    onClick={handleMenu}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                  <Menu
+                    id='menu-appbar'
+                    anchorEl={anchorEl}
+                    anchorOrigin={{
+                      vertical: 'top',
+                      horizontal: 'right',
+                    }}
+                    keepMounted
+                    transformOrigin={{
+                      vertical: 'top',
+                      horizontal: 'right',
+                    }}
+                    open={open}
+                    onClose={() => setAnchorEl(null)}
+                  >
+                    {menuItems.map((menuItem) => {
+                      return (
+                        <MenuItem
+                          key={menuItem.menuTitle}
+                          onClick={() => handleMenuClick(menuItem.pageURL)}
+                        >
+                          {menuItem.menuTitle}
+                        </MenuItem>
+                      );
+                    })}
+                  </Menu>{' '}
+                </>
+              ) : (
+                <div className={classes.headerOptions}>
                   {menuItems.map((menuItem) => {
                     return (
-                      <MenuItem
-                        key={menuItem.menuTitle}
+                      <Button
                         className={classes.buttons}
+                        data-testid={menuItem.menuTitle}
+                        key={menuItem.menuTitle}
                         onClick={() => handleMenuClick(menuItem.pageURL)}
+                        style={{ color: 'primary', textSizeAdjust: 'small' }}
                       >
                         {menuItem.menuTitle}
-                      </MenuItem>
+                      </Button>
                     );
                   })}
-                </Menu>{' '}
-              </>
-            ) : (
-              <div className={classes.headerOptions}>
-                {menuItems.map((menuItem) => {
-                  return (
-                    <Button
-                      className={classes.buttons}
-                      data-testid={menuItem.menuTitle}
-                      key={menuItem.menuTitle}
-                      onClick={() => handleMenuClick(menuItem.pageURL)}
-                      style={{ color: 'primary', textSizeAdjust: 'small' }}
-                    >
-                      {menuItem.menuTitle}
-                    </Button>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-        </Toolbar>
-      </AppBar>
-    </div>
+                </div>
+              )}
+            </div>
+          </Toolbar>
+        </AppBar>
+      </div>
   );
 };
 
