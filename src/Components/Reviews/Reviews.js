@@ -8,12 +8,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  sectionHeader: {
+  pageTitle: {
     fontFamily: 'unquote',
     fontSize: '28px',
     display: 'flex',
     flexDirection: 'row',
-    marginLeft: '1em',
+    justifyContent: 'center',
     marginBottom: '.5em',
     fontWeight: 'bold',
     textAlign: 'left',
@@ -26,8 +26,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'scroll',
     textAlign: 'left',
     // borderRadius: '1em',
-    boxShadow: '6px 4px 9px 3px'
-    
+    boxShadow: '6px 4px 9px 3px',
   },
   bullet: {
     display: 'inline-block',
@@ -48,7 +47,7 @@ const Reviews = () => {
   return (
     <div>
       <header>
-        <Typography variant='h4' className={classes.sectionHeader}>
+        <Typography variant='h4' color='primary' className={classes.pageTitle}>
           Reviews
         </Typography>
       </header>
