@@ -73,5 +73,11 @@ export const importedReviews = {
       stars: 5,
       writtenReview: `The Birdhouse was such a great place to stay for our quick weekend getaway. The high end finishes and efficient use of space made for such an enjoyable and relaxing stay. We loved having the private patio to sit outside and enjoy the great weather and views. Would absolutely stay here again.`,
     },
+    {
+      id: 8,
+      name: 'Samantha',
+      stars: 5,
+      writtenReview: `The Birdhouse was a perfect “home base” during our most recent trip to Colorado. We wanted to explore the Boulder and surrounding areas more this time, and this location was great for that - plus Denver is close enough for some “bigger city” adventures! We planned to cook the majority of our meals, and the Birdhouse kitchen allowed us to make all of our favorites given how well stocked it was with good quality equipment! While the space is studio style, there is PLENTY of storage for our luggage that kept the space feeling clean, open and spacious. The patio was also fantastic for sunrises and a little extra space. When you stay, definitely walk the path right off from the backyard. The lake is stunning with good mountains views as well. Check in and communication were top notch- Micah and Amanda definitely deserve their Super Host badge!`,
+    },
   ],
 };
