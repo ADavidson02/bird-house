@@ -36,22 +36,29 @@ const Contact = () => {
 
 
   
-  return(
+  return (
     <div>
       <Typography variant='h4' color='primary' className={classes.pageTitle}>
-        Contact 
+        Contact
       </Typography>
       <form noValidate autoComplete='off'>
-        <TextField 
-        error={error.name}
-        required={error.name}
-        variant='outlined'
-        label='Name'
-        onChange={(e) => setContactName(e.target.value)}
+        <TextField
+          error={error.name}
+          required={error.name}
+          variant='outlined'
+          label='Name'
+          onChange={(e) => setContactName(e.target.value)}
+        ></TextField>
+        <TextField
+          error={error.email}
+          required={error.email}
+          variant='outlined'
+          label='Email'
+          onChange={(e) => setEmail(e.target.value)}
         ></TextField>
       </form>
     </div>
-  ) 
+  ); 
 };
 
 export default Contact;
