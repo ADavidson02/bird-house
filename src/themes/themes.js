@@ -1,13 +1,13 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import { teal } from '@material-ui/core/colors';
+// import '#1a237e'  from '@material-ui/core/colors';
 
 export const theme = createMuiTheme({
   palette: {
     primary: {
-      main: teal[400],
+      main: '#01579b',
     },
     secondary: {
-      main: teal[200],
+      main: '#b2102f',
     },
   },
   overrides: {
@@ -15,7 +15,7 @@ export const theme = createMuiTheme({
       root: {
         position: 'relative',
         '& $notchedOutline': {
-          borderColor: teal[100],
+          borderColor: '#01579b'[100],
         },
       },
     },

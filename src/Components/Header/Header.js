@@ -21,27 +21,27 @@ const useStyles = makeStyles((theme) => ({
     elevation: 0,
     maxWidth: '100%',
     overflowX: 'hidden',
-    color: '#333',
+    color: '#01579b',
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    color: 'teal',
-    marginLeft: '4em'
+    color: '#b2102f',
+    marginLeft: '4em',
   },
-  title: { flexGrow: 1, color: 'teal' },
-  headerOptions: { margin: '0 10px'},
+  title: { flexGrow: 1, color: '#01579b' },
+  headerOptions: { margin: '0 10px' },
   buttons: {
     '&:hover': {
       textDecoration: 'underline',
-      color: 'teal',
+      color: '#01579b',
     },
     '&:active': {
       textDecoration: 'underline',
-      color: 'teal',
+      color: '#01579b',
     },
     '&:after': {
       textDecoration: 'underline',
-      color: 'teal',
+      color: '#01579b',
     },
   },
 }));
