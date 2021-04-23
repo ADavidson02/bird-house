@@ -51,7 +51,7 @@ const Reviews = () => {
   const guestReviews = importedReviews.reviews;
   const reviewCards = guestReviews.map((guestReview) => {
     return (
-        <Grid item  s={6} md={4} l={4}>
+        <Grid item xs={12} s={4} md={4} l={3}>
         <Card key={guestReview.id} className={classes.cardRoot}>
           <CardContent>
             <Typography variant='h6'>{guestReview.name}</Typography>
@@ -82,7 +82,7 @@ const Reviews = () => {
           direction='row'
           // className={classes.root}
           cols={3}
-          spacing={1}
+          spacing={2}
         >
             {reviewCards}
         </Grid>
