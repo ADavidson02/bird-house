@@ -85,5 +85,11 @@ export const importedReviews = {
       stars: 5,
       writtenReview: `5 stars ⭐⭐⭐⭐⭐. The Bird House was great! Pretty much exactly as pictured. Nice space and great balcony off of the back. Very accessible to Estes Park and the Rocky Mountains (only about an hour drive). We also visited during a snow storm in Summer and Micah was very flexible with allowing us to stay longer if needed. All was much appreciated and we will book again when we come back!`,
     },
+    {
+      id: 10,
+      name: 'Daniel',
+      stars: 5,
+      writtenReview: `First off Micah and his wife are outstanding host’s. The bird house was so clean and they made it feel like you were at home. It very much felt like it was a place of my own. I didn’t feel as though I was in there guest house. Micah gave us plenty of privacy and never invaded our space. Micah took the time to print out notes in a binder on how to use everything in the house. It’s the little things that Micah and his wife took time to do, to make our experience great. The bird house is in a quite location and the neighborhood is beautiful. I also think it’s in a great location from things to do too. Close to Denver, close enough to Estes park which we loved!! Went their twice we liked it so much. Got to see elk super close and feed the chipmunks. Thank you so Micah for making our trip a great experience! We will definitely be back and have already told friends and family about this place.`,
+    },
   ],
 };
