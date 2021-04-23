@@ -41,6 +41,15 @@ const Contact = () => {
       <Typography variant='h4' color='primary' className={classes.pageTitle}>
         Contact 
       </Typography>
+      <form noValidate autoComplete='off'>
+        <TextField 
+        error={error.name}
+        required={error.name}
+        variant='outlined'
+        label='Name'
+        onChange={(e) => setContactName(e.target.value)}
+        ></TextField>
+      </form>
     </div>
   ) 
 };
