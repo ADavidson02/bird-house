@@ -61,5 +61,11 @@ export const importedReviews = {
       stars: 5,
       writtenReview: `Micah’s place is wonderful for a couple that’s trying to get away for a few days. The scenery was pleasant. The mountains can be viewed from the large deck. Me & my spouse came during the winter months, and their place heats up rather quick and gets and stays comfortable throughout the stay. The LED lights around the residence was a great way to set the mood. This residence was not difficult to find, and was in a quiet neighborhood. The mattress and pillows were very comfy I believe them both to be memory foam. Micah did a great job listing places to eat as well as places to go to have fun. They were located just 30 minutes north of Denver so the travel time was not really bad at all. I would definitely book with The Bird House in the near future.`,
     },
+    {
+      id: 6,
+      name: 'Angela',
+      stars: 5,
+      writtenReview: `The PERFECT place for peace and quiet! The Bird House is clean, comfortable and has lots of nice modern touches. Micah is a great host and and ready to help out when ever needed. The Bird House will definitely be at the top of my list of places to stay on my next trip to Colorado.`,
+    },
   ],
 };
