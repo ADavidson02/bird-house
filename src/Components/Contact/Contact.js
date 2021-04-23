@@ -71,6 +71,14 @@ const Contact = () => {
           label='Message'
           onChange={(e) => setMessage(e.target.value)}
         ></TextField>
+        <Button
+          variant='contained'
+          color='secondary'
+          disabled={disabled}
+          onClick={sendEmail}
+        >
+          Send
+        </Button>
       </form>
     </div>
   ); 
