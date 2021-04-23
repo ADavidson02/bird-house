@@ -19,13 +19,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
   },
   cardRoot: {
-    // minWidth: 275,
+    minWidth: 275,
     // display: 'flex',
-    // height: '30em',
-    margin: '1em',
+    height: '27em',
+    margin: '2em',
     overflow: 'scroll',
     textAlign: 'left',
-    // borderRadius: '1em',
     boxShadow: '6px 4px 9px 3px',
   },
   bullet: {
@@ -52,8 +51,14 @@ const Reviews = () => {
         </Typography>
       </header>
       <main>
-        <Grid container direction='row' className={classes.root} spacing={2}>
-          <Grid item xs={12} s={6} md={4} l={3}>
+        <Grid
+          container
+          direction='row'
+          className={classes.root}
+          cols={2}
+          spacing={2}
+        >
+          <Grid item xs={12} s={6} md={6} l={6}>
             <Card className={classes.cardRoot}>
               <CardContent>
                 <Typography variant='h5' component='h2'>
@@ -76,7 +81,7 @@ const Reviews = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} s={6} md={4} l={3}>
+          <Grid item xs={12} s={6} md={6} l={3}>
             <Card className={classes.cardRoot}>
               <CardContent>
                 <Typography variant='h5' component='h2'>
@@ -102,7 +107,7 @@ const Reviews = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} s={6} md={4} l={3}>
+          <Grid item xs={12} s={6} md={6} l={3}>
             <Card className={classes.cardRoot}>
               <CardContent>
                 <Typography variant='h5' component='h2'>
