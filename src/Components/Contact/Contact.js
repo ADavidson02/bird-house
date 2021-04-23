@@ -56,6 +56,13 @@ const Contact = () => {
           label='Email'
           onChange={(e) => setEmail(e.target.value)}
         ></TextField>
+        <TextField
+          error={error.phone}
+          required={error.phone}
+          variant='outlined'
+          label='Phone'
+          onChange={(e) => setPhone(e.target.value)}
+        ></TextField>
       </form>
     </div>
   ); 
