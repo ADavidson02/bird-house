@@ -8,6 +8,7 @@ import {
   Card,
   CardContent,
   TextField,
+  Button,
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -62,6 +63,13 @@ const Contact = () => {
           variant='outlined'
           label='Phone'
           onChange={(e) => setPhone(e.target.value)}
+        ></TextField>
+        <TextField
+          error={error.message}
+          required={error.massage}
+          variant='outlined'
+          label='Message'
+          onChange={(e) => setMessage(e.target.value)}
         ></TextField>
       </form>
     </div>
