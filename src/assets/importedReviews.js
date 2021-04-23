@@ -79,5 +79,11 @@ export const importedReviews = {
       stars: 5,
       writtenReview: `The Birdhouse was a perfect “home base” during our most recent trip to Colorado. We wanted to explore the Boulder and surrounding areas more this time, and this location was great for that - plus Denver is close enough for some “bigger city” adventures! We planned to cook the majority of our meals, and the Birdhouse kitchen allowed us to make all of our favorites given how well stocked it was with good quality equipment! While the space is studio style, there is PLENTY of storage for our luggage that kept the space feeling clean, open and spacious. The patio was also fantastic for sunrises and a little extra space. When you stay, definitely walk the path right off from the backyard. The lake is stunning with good mountains views as well. Check in and communication were top notch- Micah and Amanda definitely deserve their Super Host badge!`,
     },
+    {
+      id: 9,
+      name: 'Timothy',
+      stars: 5,
+      writtenReview: `5 stars ⭐⭐⭐⭐⭐. The Bird House was great! Pretty much exactly as pictured. Nice space and great balcony off of the back. Very accessible to Estes Park and the Rocky Mountains (only about an hour drive). We also visited during a snow storm in Summer and Micah was very flexible with allowing us to stay longer if needed. All was much appreciated and we will book again when we come back!`,
+    },
   ],
 };
