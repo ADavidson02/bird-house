@@ -49,5 +49,11 @@ export const importedReviews = {
                   perk. I came home with all fresh, clean clothes! Thank you
                   again, Micah. I would stay here again in a heartbeat.`,
     },
+    {
+      id: 4,
+      name: 'Meg',
+      stars: 5,
+      writtenReview: `If I had to describe this little Airbnb in one word it would be “quality!” The decor, thoughtful touches, location, appliances and electronics are all made from the best. My husband and I booked it for a “rest and recoup” whilst driving cross-country and it provided for all our needs. Had we been there to explore the area, there was also great local recommendations in the handy guide. Definitely book yourself a stay here!`,
+    },
   ],
 };
