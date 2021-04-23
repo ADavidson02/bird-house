@@ -67,5 +67,11 @@ export const importedReviews = {
       stars: 5,
       writtenReview: `The PERFECT place for peace and quiet! The Bird House is clean, comfortable and has lots of nice modern touches. Micah is a great host and and ready to help out when ever needed. The Bird House will definitely be at the top of my list of places to stay on my next trip to Colorado.`,
     },
+    {
+      id: 7,
+      name: 'Josh',
+      stars: 5,
+      writtenReview: `The Birdhouse was such a great place to stay for our quick weekend getaway. The high end finishes and efficient use of space made for such an enjoyable and relaxing stay. We loved having the private patio to sit outside and enjoy the great weather and views. Would absolutely stay here again.`,
+    },
   ],
 };
