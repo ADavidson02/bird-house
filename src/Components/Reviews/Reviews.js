@@ -1,5 +1,11 @@
 import React from 'react';
-import { Grid, makeStyles, Typography, GridList, GridListTile, Card, CardContent } from '@material-ui/core';
+import {
+  Grid,
+  makeStyles,
+  Typography,
+  Card,
+  CardContent,
+} from '@material-ui/core';
 import StarIcon from '@material-ui/icons/Star';
 import { theme } from '../../themes/themes';
 import { importedReviews } from '../../assets/importedReviews';
@@ -14,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
-    marginBottom: '.5em',
+    marginTop: '.5em',
     fontWeight: 'bold',
     textAlign: 'left',
   },
@@ -25,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     margin: '2em',
     overflow: 'scroll',
     textAlign: 'left',
-    boxShadow: '6px 4px 9px 3px',
+    boxShadow: '0px 4px 10px 0px',
   },
   bullet: {
     display: 'inline-block',
@@ -41,16 +47,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Reviews = () => {
-    const classes = useStyles();
-    const guestReviews = importedReviews.reviews
-
-    const reviewCards = guestReviews.map((guestReview) => {
-      return (
+  const classes = useStyles();
+  const guestReviews = importedReviews.reviews;
+  const reviewCards = guestReviews.map((guestReview) => {
+    return (
+        <Grid item  s={6} md={4} l={4}>
         <Card key={guestReview.id} className={classes.cardRoot}>
           <CardContent>
-            <Typography variant='h5' component='h2'>
-             {guestReview.name}
-            </Typography>
+            <Typography variant='h6'>{guestReview.name}</Typography>
             <StarIcon style={{ color: '#01579b' }}></StarIcon>
             <StarIcon style={{ color: '#01579b' }}></StarIcon>
             <StarIcon style={{ color: '#01579b' }}></StarIcon>
@@ -61,8 +65,9 @@ const Reviews = () => {
             </Typography>
           </CardContent>
         </Card>
-      );
-    })
+        </Grid>
+    );
+  });
 
   return (
     <div>
@@ -75,13 +80,11 @@ const Reviews = () => {
         <Grid
           container
           direction='row'
-          className={classes.root}
-          cols={2}
-          spacing={2}
+          // className={classes.root}
+          cols={3}
+          spacing={1}
         >
-          <Grid item xs={12} s={6} md={6} l={6}>
-          {reviewCards}
-          </Grid>
+            {reviewCards}
         </Grid>
       </main>
     </div>
