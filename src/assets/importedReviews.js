@@ -55,5 +55,11 @@ export const importedReviews = {
       stars: 5,
       writtenReview: `If I had to describe this little Airbnb in one word it would be “quality!” The decor, thoughtful touches, location, appliances and electronics are all made from the best. My husband and I booked it for a “rest and recoup” whilst driving cross-country and it provided for all our needs. Had we been there to explore the area, there was also great local recommendations in the handy guide. Definitely book yourself a stay here!`,
     },
+    {
+      id: 5,
+      name: 'Jarrett M.',
+      stars: 5,
+      writtenReview: `Micah’s place is wonderful for a couple that’s trying to get away for a few days. The scenery was pleasant. The mountains can be viewed from the large deck. Me & my spouse came during the winter months, and their place heats up rather quick and gets and stays comfortable throughout the stay. The LED lights around the residence was a great way to set the mood. This residence was not difficult to find, and was in a quiet neighborhood. The mattress and pillows were very comfy I believe them both to be memory foam. Micah did a great job listing places to eat as well as places to go to have fun. They were located just 30 minutes north of Denver so the travel time was not really bad at all. I would definitely book with The Bird House in the near future.`,
+    },
   ],
 };
