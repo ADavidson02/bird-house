@@ -28,5 +28,26 @@ export const importedReviews = {
                   highly recommend if you’re wanting a place outside the city a
                   bit and don’t mind driving some.`,
     },
+    {
+      id: 3,
+      name: 'Michaela',
+      stars: 5,
+      writtenReview: `Micah/’s Bird House space was outstanding. There are many
+                  Airbnb’s to choose from in Denver, I am so glad I decided to
+                  book with Micah. This host is not only friendly and
+                  personable, but very communicative. The apartment itself was
+                  set up like a big open studio. It was comfortable, stylish,
+                  bright, and welcoming. I was in the area to explore but found
+                  myself staying in more than I anticipated because I loved this
+                  space so much. I felt extremely safe which is a huge part of
+                  why I choose certain Airbnb’s as a solo gal. The a/c and heat
+                  worked like a charm and the kitchen has everything you could
+                  ever need to prepare meals. Thank you for the complimentary
+                  coffee, tea, and hot chocolate; those touches are always so
+                  appreciated. I stayed here during my last few nights in
+                  Colorado so having access to the washer/dryer was such a huge
+                  perk. I came home with all fresh, clean clothes! Thank you
+                  again, Micah. I would stay here again in a heartbeat.`,
+    },
   ],
 };
