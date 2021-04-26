@@ -17,6 +17,16 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     textAlign: 'left',
   },
+  formRoot: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: '2em'
+  },
+  formField: {
+    margin: '1em',
+    webkitBoxShadow: '5px 3px 5px -1px #000000',
+    boxShadow: '5px 3px 5px -1px #000000',
+  }
 }));
 
 const Contact = () => {
@@ -81,8 +91,9 @@ const Contact = () => {
       <Typography variant='h4' color='primary' className={classes.pageTitle}>
         Contact
       </Typography>
-      <form id='contact-form' noValidate >
+      <form id='contact-form' noValidate className={classes.formRoot}>
         <TextField
+          className={classes.formField}
           error={error.name}
           required={error.name}
           type='text'
@@ -93,6 +104,7 @@ const Contact = () => {
           onChange={(e) => setContactName(e.target.value)}
         ></TextField>
         <TextField
+          className={classes.formField}
           error={error.email}
           required={error.email}
           variant='outlined'
@@ -102,17 +114,21 @@ const Contact = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         ></TextField>
-      <TextField
+        <TextField
+          className={classes.formField}
           error={error.message}
           required={error.message}
           variant='outlined'
           label='Message'
           type='text'
           name='user_message'
+          multiline
+          rowsMax={12}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         ></TextField>
         <Button
+          className={classes.formField}
           variant='contained'
           color='secondary'
           disabled={disabled}
@@ -120,7 +136,9 @@ const Contact = () => {
         >
           Send
         </Button>
-        {formError && <h3>Please make sure all inputs are filled before pressing send</h3>} 
+        {formError && (
+          <h3>Please make sure all inputs are filled before pressing send</h3>
+        )}
       </form>
     </div>
   );
