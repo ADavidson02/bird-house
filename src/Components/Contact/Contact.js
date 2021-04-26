@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { theme } from '../../themes/themes';
-import { makeStyles, Typography, TextField, Button } from '@material-ui/core';
+import { makeStyles, Typography, TextField, Button, Grid } from '@material-ui/core';
 import emailjs from 'emailjs-com';
-import { TramOutlined } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,7 +36,6 @@ const Contact = () => {
   };
 
   const checkFields = (e) => {
-    debugger
     if (!name || !email || !message) {
       setDisabled(false);
       if (!name) {
@@ -50,6 +48,7 @@ const Contact = () => {
             setFormError(true)
             return 
     } else {
+      setDisabled(true)
       sendEmail(e)
     }
   }
