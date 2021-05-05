@@ -1,21 +1,20 @@
-
 export const birdHouse = {
   blurbs: [
     {
       id: 'intoBlurb',
-      title: 'Intro',
       information: `The Bird House is a completely private studio with everything you
-                  need! With no shared spaces or walls, a large private deck with
-                  beautiful scenery, this is the perfect place to unwind after a day
-                  of exploring! Or cuddle up with the elegant electric fireplace,
-                  and watch your favorite streaming services on a 50" TV and just
-                  stay in and relax. The modern kitchen makes cooking simple &
-                  convenient and the stunning bathroom with 2 shower heads will
-                  leave you refreshed, never wanting to leave!`,
+              need! With no shared spaces or walls, a large private deck with
+              beautiful scenery, this is the perfect place to unwind after a day
+              of exploring! Or cuddle up with the elegant electric fireplace,
+              and watch your favorite streaming services on a 50" TV and just
+              stay in and relax. The modern kitchen makes cooking simple &
+              convenient and the stunning bathroom with 2 shower heads will
+              leave you refreshed, never wanting to leave!`,
     },
     {
       id: 'theSpace',
       title: 'The space',
+      headline: 'Welcome to the Bird House! We can not wait to have you stay!',
       information: `The Bird House is a studio style living arrangement, above a
               detached garage, that we designed with comfort and convenience in
               mind. You will find everything you need for a couple nights or
@@ -25,7 +24,7 @@ export const birdHouse = {
               plenty of parking in front of our home. Checking in is as simple
               as entering a 4-digit code and walking in. Inside you will be
               greeted by beautiful new, modern finishes and you will immediately
-              feel at home!`
+              feel at home!`,
     },
     {
       id: 'kitchenBlurb',
@@ -120,6 +119,21 @@ export const birdHouse = {
             your use in the Bird House for those traveling with children. Thanks
             for your interest in our place and please do not hesitate to reach
             out with any additional questions!`,
+    },
+  ],
+  amenitites: [
+    {
+      id: 'bathAmenities',
+      title: 'Bathroom',
+      items: [
+        'Conditioner',
+        'Cleaning products',
+        'Shampoo',
+        'Hair dryer',
+        'Hot water',
+        'Body soap',
+        'Towels',
+      ],
     },
   ],
 };
