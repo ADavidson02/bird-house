@@ -121,7 +121,7 @@ export const birdHouse = {
             out with any additional questions!`,
     },
   ],
-  amenitites: [
+  amenites: [
     {
       id: 'bathAmenities',
       title: 'Bathroom',
@@ -133,6 +133,19 @@ export const birdHouse = {
         'Hot water',
         'Body soap',
         'Towels',
+      ],
+    },
+    {
+      id: 'bedroomAndLaundry',
+      title: 'Bathroom & Laundry',
+      items: [
+        'Clothing storage: dresser and walk-in closet',
+        'Washer/Dryer',
+        'Hangers',
+        'Iron',
+        'Room-darkening shades',
+        'Bed linens',
+        'Extra pillows and blankets',
       ],
     },
   ],
