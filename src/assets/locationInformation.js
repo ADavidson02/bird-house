@@ -2,7 +2,7 @@ export const birdHouse = {
   blurbs: [
     {
       id: 'intoBlurb',
-      name: 'Intro',
+      title: 'Intro',
       information: `The Bird House is a completely private studio with everything you
                   need! With no shared spaces or walls, a large private deck with
                   beautiful scenery, this is the perfect place to unwind after a day
@@ -14,7 +14,7 @@ export const birdHouse = {
     },
     {
       id: 'kitchenBlurb',
-      name: 'Kitchen',
+      title: 'Kitchen',
       information: `One of our guest favorite amenity is the kitchen. You will find a
               full-size refrigerator, 2 burner electric cooktop, a convection
               microwave (we do not have a traditional oven, but the microwave
@@ -27,7 +27,7 @@ export const birdHouse = {
     },
     {
       id: 'livingRoomBlurb',
-      name: 'Livingroom',
+      title: 'Living Room',
       information: `Weather you plan to be out exploring for most of your stay, or you
             just want a place to relax and escape the world you will enjoy the
             entertainment provided in the Bird House. You will find a comfy sofa
@@ -38,7 +38,21 @@ export const birdHouse = {
             large variety of games or put a movie in the Blu-Ray from our
             selection. Want to warm up a bit more or set the mood for a romantic
             evening? Turn on the electric fireplace, with or without the heat,
-            and enjoy the ambiance.`
+            and enjoy the ambiance.`,
+    },
+    {
+      id: 'sleepingBlurb',
+      title: 'Sleeping Arrangement',
+      information: `The main bed is a very comfy queen mattress on a custom murphy bed.
+            The murphy bed is designed to fold up to make more space if needed.
+            No expense was spared with the sleeping arrangements as a good night
+            sleep is one of the most important factors for a great stay! There
+            is also a desk that can be flipped out when the murphy bed is up!
+            You will find another bed as a queen sleeper sofa with an upgraded
+            memory foam mattress. I like to let our reviews to speak for
+            themselves and the mattresses are always very important. (From
+            Leslie, we were exhausted in the evening, and the beds were so comfy
+            - even the sofa sleeper!)`,
     },
   ],
 };
