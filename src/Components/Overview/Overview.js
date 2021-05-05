@@ -9,18 +9,6 @@ import {
 } from '@material-ui/core';
 import { theme } from '../../themes/themes';
 import { Button } from '@material-ui/core';
-import PeopleOutlinedIcon from '@material-ui/icons/PeopleOutlined';
-import KingBedOutlinedIcon from '@material-ui/icons/KingBedOutlined';
-import EmojiFoodBeverageOutlinedIcon from '@material-ui/icons/EmojiFoodBeverageOutlined';
-import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
-import FingerprintIcon from '@material-ui/icons/Fingerprint';
-import WbSunnyOutlinedIcon from '@material-ui/icons/WbSunnyOutlined';
-import AcUnitOutlinedIcon from '@material-ui/icons/AcUnitOutlined';
-import LocalParkingOutlinedIcon from '@material-ui/icons/LocalParkingOutlined';
-import TvOutlinedIcon from '@material-ui/icons/TvOutlined';
-import LocalLaundryServiceOutlinedIcon from '@material-ui/icons/LocalLaundryServiceOutlined';
-import WifiOutlinedIcon from '@material-ui/icons/WifiOutlined';
-import KitchenOutlinedIcon from '@material-ui/icons/KitchenOutlined';
 import Divider from '@material-ui/core/Divider';
 import './Overview.scss';
 import imageOne from '../../assets/bird-house-1.webp';
@@ -132,9 +120,21 @@ const useStyles = makeStyles((theme) => ({
 
 const Overview = () => {
   const classes = useStyles();
-
   const locationInfo = birdHouse.blurbs;
-  const amenitiesInfo = birdHouse.amenites;
+  const amenitiesInfo = birdHouse.amenities;
+  const iconList = birdHouse.iconsList;
+  const amenitiesIcons = birdHouse.amenitiesIcons;
+
+  const topIcons = iconList.map((iconItem) => {
+    return (
+      <div className={classes.gridIcon}>
+        {iconItem.icon}
+        <p style={{ marginRight: '1em', marginLeft: '.3em'}}>
+          {iconItem.title}
+        </p>
+      </div>
+    );
+  })
 
   const infoBlurbs = locationInfo.map((inforBlurb) => {
     return (
@@ -154,7 +154,6 @@ const Overview = () => {
     const itemsList = amenitiesList.items.map((item) => {
       return <ul className={classes.ulText}>{item}</ul>;
     })
-
       return (
         <Grid item xs={6} s={6} md={4} lg={2} xl={2}>
           <Typography className={classes.subTitle}>
@@ -164,6 +163,35 @@ const Overview = () => {
         </Grid>
       )
   });
+
+  const amenitiesIconDisplay = amenitiesIcons.map((icon) => {
+    return (
+      <div className={classes.amenitiesList}>
+        <Grid
+          item
+          xs={3}
+          s={3}
+          md={2}
+          lg={1}
+          xl={1}
+          className={classes.amenitieIteam}
+        >
+          {icon.title}
+        </Grid>
+        <Grid
+          item
+          xs={3}
+          s={3}
+          md={2}
+          lg={1}
+          xl={1}
+          className={classes.amenitiesIcon}
+        >
+          {icon.icon}
+        </Grid>
+      </div>
+    );
+  })
 
   return (
     <ThemeProvider theme={theme}>
@@ -191,28 +219,7 @@ const Overview = () => {
           Overview
         </Typography>
         <Grid item className={classes.grid}>
-          <div className={classes.gridIcon}>
-            <HomeOutlinedIcon />
-            <p style={{ marginRight: '1em' }}>Entire House</p>
-          </div>
-          <div className={classes.gridIcon}>
-            <PeopleOutlinedIcon />
-            <p style={{ marginRight: '1em' }}>4 Guests</p>
-          </div>
-          <div className={classes.gridIcon}>
-            <KingBedOutlinedIcon style={{ fontWeight: 'lighter' }} />
-            <p style={{ marginRight: '1em' }}>2 beds</p>
-          </div>
-          <div className={classes.gridIcon}>
-            <FingerprintIcon />
-            <p style={{ marginRight: '1em' }}>Self check-in</p>
-          </div>
-          <div className={classes.gridIcon}>
-            <EmojiFoodBeverageOutlinedIcon />
-            <p style={{ marginRight: '1em', marginLeft: '.5em' }}>
-              Full kitchen
-            </p>
-          </div>
+          {topIcons}
         </Grid>
         <Grid container>
           {infoBlurbs}
@@ -224,174 +231,7 @@ const Overview = () => {
               Amenities
             </Typography>
           </Grid>
-          <div className={classes.amenitiesList}>
-            <Grid
-              item
-              xs={3}
-              s={3}
-              md={2}
-              lg={1}
-              xl={1}
-              className={classes.amenitieIteam}
-            >
-              Private Deck
-            </Grid>
-            <Grid
-              item
-              xs={3}
-              s={3}
-              md={2}
-              lg={1}
-              xl={1}
-              className={classes.amenitiesIcon}
-            >
-              <WbSunnyOutlinedIcon />
-            </Grid>
-          </div>
-          <div className={classes.amenitiesList}>
-            <Grid
-              item
-              xs={3}
-              s={3}
-              md={2}
-              lg={1}
-              xl={1}
-              className={classes.amenitieIteam}
-            >
-              Air conditioning
-            </Grid>
-            <Grid
-              item
-              xs={3}
-              s={3}
-              md={2}
-              lg={1}
-              xl={1}
-              className={classes.amenitiesIcon}
-            >
-              <AcUnitOutlinedIcon />
-            </Grid>
-          </div>
-          <div className={classes.amenitiesList}>
-            <Grid
-              item
-              xs={3}
-              s={3}
-              md={2}
-              lg={1}
-              xl={1}
-              className={classes.amenitieIteam}
-            >
-              50" HDTV
-            </Grid>
-            <Grid
-              item
-              xs={3}
-              s={3}
-              md={2}
-              lg={1}
-              xl={1}
-              className={classes.amenitiesIcon}
-            >
-              <TvOutlinedIcon />
-            </Grid>
-          </div>
-          <div className={classes.amenitiesList}>
-            <Grid
-              item
-              xs={3}
-              s={3}
-              md={2}
-              lg={1}
-              xl={1}
-              className={classes.amenitieIteam}
-            >
-              Free parking
-            </Grid>
-            <Grid
-              item
-              xs={3}
-              s={3}
-              md={2}
-              lg={1}
-              xl={1}
-              className={classes.amenitiesIcon}
-            >
-              <LocalParkingOutlinedIcon />
-            </Grid>
-          </div>
-          <div className={classes.amenitiesList}>
-            <Grid
-              item
-              xs={3}
-              s={3}
-              md={2}
-              lg={1}
-              xl={1}
-              className={classes.amenitiesIteam}
-            >
-              Washer/Dryer
-            </Grid>
-            <Grid
-              item
-              xs={3}
-              s={3}
-              md={2}
-              lg={1}
-              xl={1}
-              className={classes.amenitiesIcon}
-            >
-              <LocalLaundryServiceOutlinedIcon />
-            </Grid>
-          </div>
-          <div className={classes.amenitiesList}>
-            <Grid
-              item
-              xs={3}
-              s={3}
-              md={2}
-              lg={1}
-              xl={1}
-              className={classes.amenitieIteam}
-            >
-              Wifi
-            </Grid>
-            <Grid
-              item
-              xs={3}
-              s={3}
-              md={2}
-              lg={1}
-              xl={1}
-              className={classes.amenitiesIcon}
-            >
-              <WifiOutlinedIcon />
-            </Grid>
-          </div>
-          <div className={classes.amenitiesList}>
-            <Grid
-              item
-              xs={3}
-              s={3}
-              md={2}
-              lg={1}
-              xl={1}
-              className={classes.amenitieIteam}
-            >
-              Kitchen
-            </Grid>
-            <Grid
-              item
-              xs={3}
-              s={3}
-              md={2}
-              lg={1}
-              xl={1}
-              className={classes.amenitiesIcon}
-            >
-              <KitchenOutlinedIcon />
-            </Grid>
-          </div>
+            {amenitiesIconDisplay}
         </Grid>
         <div>
           <Grid container>
