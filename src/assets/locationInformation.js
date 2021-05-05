@@ -25,5 +25,20 @@ export const birdHouse = {
               maker, plates, bowls, cups, silverware, knives, cooking utensils,
               toaster and a Britta purified water pitcher.`,
     },
+    {
+      id: 'livingRoomBlurb',
+      name: 'Livingroom',
+      information: `Weather you plan to be out exploring for most of your stay, or you
+            just want a place to relax and escape the world you will enjoy the
+            entertainment provided in the Bird House. You will find a comfy sofa
+            and chair to relax and watch the 50” TV. We provide your favorite
+            streaming service such as Netflix, Disney+, and Prime Video. You are
+            also welcomed to sign into your personal accounts on the smart TV.
+            Tired of binging TV? Turn on the XBOX 360 and choose a game from a
+            large variety of games or put a movie in the Blu-Ray from our
+            selection. Want to warm up a bit more or set the mood for a romantic
+            evening? Turn on the electric fireplace, with or without the heat,
+            and enjoy the ambiance.`
+    },
   ],
 };
