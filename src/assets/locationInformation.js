@@ -1,4 +1,45 @@
+
+import PeopleOutlinedIcon from '@material-ui/icons/PeopleOutlined';
+import KingBedOutlinedIcon from '@material-ui/icons/KingBedOutlined';
+import EmojiFoodBeverageOutlinedIcon from '@material-ui/icons/EmojiFoodBeverageOutlined';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import FingerprintIcon from '@material-ui/icons/Fingerprint';
+import WbSunnyOutlinedIcon from '@material-ui/icons/WbSunnyOutlined';
+import AcUnitOutlinedIcon from '@material-ui/icons/AcUnitOutlined';
+import LocalParkingOutlinedIcon from '@material-ui/icons/LocalParkingOutlined';
+import TvOutlinedIcon from '@material-ui/icons/TvOutlined';
+import LocalLaundryServiceOutlinedIcon from '@material-ui/icons/LocalLaundryServiceOutlined';
+import WifiOutlinedIcon from '@material-ui/icons/WifiOutlined';
+import KitchenOutlinedIcon from '@material-ui/icons/KitchenOutlined';
+
 export const birdHouse = {
+  iconsList: [
+    {
+      id: 'house',
+      title: 'Entire House',
+      icon: <HomeOutlinedIcon />
+    },
+    {
+      id: 'guestCount',
+      title: '4 Guests',
+      icon: <PeopleOutlinedIcon />
+    },
+    {
+      id: 'beds',
+      title: '2 beds',
+      icon: <KingBedOutlinedIcon />
+    },
+    {
+      id: 'checkIn',
+      title: 'Self check-in',
+      icon: <FingerprintIcon />
+    },
+    {
+      id: 'fullKitchen',
+      title: 'Full Kitchen',
+      icon: <EmojiFoodBeverageOutlinedIcon />
+    }
+  ],
   blurbs: [
     {
       id: 'intoBlurb',
@@ -174,7 +215,7 @@ export const birdHouse = {
         'Portable fan',
         'Ceiling fan',
         'Indoor fireplace',
-        'Heating'
+        'Heating',
       ],
     },
   ],
