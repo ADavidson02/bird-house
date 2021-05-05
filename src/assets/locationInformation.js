@@ -156,5 +156,10 @@ export const birdHouse = {
         'Game console: Xbox 360',
       ],
     },
+    {
+      id: 'family',
+      title: 'Family',
+      items: ['Board games', 'Baby safety gates', 'Pack\'n Play/travel crib', 'Children\'s dinnerware'],
+    },
   ],
 };
