@@ -17,28 +17,28 @@ export const birdHouse = {
     {
       id: 'house',
       title: 'Entire House',
-      icon: <HomeOutlinedIcon />
+      icon: <HomeOutlinedIcon />,
     },
     {
       id: 'guestCount',
       title: '4 Guests',
-      icon: <PeopleOutlinedIcon />
+      icon: <PeopleOutlinedIcon />,
     },
     {
       id: 'beds',
       title: '2 beds',
-      icon: <KingBedOutlinedIcon />
+      icon: <KingBedOutlinedIcon />,
     },
     {
       id: 'checkIn',
       title: 'Self check-in',
-      icon: <FingerprintIcon />
+      icon: <FingerprintIcon />,
     },
     {
       id: 'fullKitchen',
       title: 'Full Kitchen',
-      icon: <EmojiFoodBeverageOutlinedIcon />
-    }
+      icon: <EmojiFoodBeverageOutlinedIcon />,
+    },
   ],
   blurbs: [
     {
@@ -162,7 +162,7 @@ export const birdHouse = {
             out with any additional questions!`,
     },
   ],
-  amenites: [
+  amenities: [
     {
       id: 'bathAmenities',
       title: 'Bathroom',
@@ -218,5 +218,42 @@ export const birdHouse = {
         'Heating',
       ],
     },
+  ],
+  amenitiesIcons: [
+    {
+      id: 'privateDeck',
+      title: 'Private Deck',
+      icon: <WbSunnyOutlinedIcon />,
+    },
+    {
+      id: 'airConditioning',
+      title: 'Air conditioning',
+      icon: <AcUnitOutlinedIcon />,
+    },
+    {
+      id: 'tv',
+      title: '50" HDTV',
+      icon: <TvOutlinedIcon />
+    },
+    {
+      id: 'parking',
+      title: 'Free parking',
+      icon: <LocalParkingOutlinedIcon />
+    },
+    {
+      id: 'washerDryer',
+      title: 'Washer/Dryer',
+      icon: <LocalLaundryServiceOutlinedIcon />
+    },
+    {
+      id: 'wifi',
+      title: 'Wifi',
+      icon: <WifiOutlinedIcon />
+    },
+    {
+      id: 'fullKitchen',
+      title: 'Kitchen',
+      icon: <KitchenOutlinedIcon />
+    }
   ],
 };
