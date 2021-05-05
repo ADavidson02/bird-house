@@ -1,3 +1,4 @@
+
 export const birdHouse = {
   blurbs: [
     {
@@ -11,6 +12,20 @@ export const birdHouse = {
                   stay in and relax. The modern kitchen makes cooking simple &
                   convenient and the stunning bathroom with 2 shower heads will
                   leave you refreshed, never wanting to leave!`,
+    },
+    {
+      id: 'theSpace',
+      title: 'The space',
+      information: `The Bird House is a studio style living arrangement, above a
+              detached garage, that we designed with comfort and convenience in
+              mind. You will find everything you need for a couple nights or
+              several months in this completely private space. No shared walls,
+              no shared living space, and tons of privacy on the back deck! As
+              you arrive at our quiet, charming neighborhood you will find
+              plenty of parking in front of our home. Checking in is as simple
+              as entering a 4-digit code and walking in. Inside you will be
+              greeted by beautiful new, modern finishes and you will immediately
+              feel at home!`
     },
     {
       id: 'kitchenBlurb',
@@ -74,7 +89,7 @@ export const birdHouse = {
             know this is our space and our dogs may come out to say hello! The
             views of the Rocky Mountains from the lake are amazing! This is by
             far my favorite part of our place, enjoying the scenery and fresh
-            air!`
+            air!`,
     },
     {
       id: 'assortedInfo',
@@ -104,7 +119,7 @@ export const birdHouse = {
             fenced area. Pack and play as well as a baby gate are available for
             your use in the Bird House for those traveling with children. Thanks
             for your interest in our place and please do not hesitate to reach
-            out with any additional questions!`
-    }
+            out with any additional questions!`,
+    },
   ],
 };
