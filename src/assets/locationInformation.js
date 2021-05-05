@@ -61,5 +61,20 @@ export const birdHouse = {
             shower has both a traditional shower head and a rain shower head
             that can be controlled independently for ultimate comfort.`,
     },
+    {
+      id: 'ourdoorBlurb',
+      title: 'Outdoor Space',
+      information: `Walk out the French doors onto a beautiful and peaceful deck. At
+            over 20’ wide you will find a table for 4 to enjoy a peaceful meal,
+            a sofa to relax while drinking your morning coffee and watch the sun
+            rise over the lake! Out the front windows and over the North West
+            side of the deck you can get a small view of the Rocky Mountains.
+            You may also use the gate in our backyard to access miles of trails
+            around the different neighborhoods and a walk around the lake, just
+            know this is our space and our dogs may come out to say hello! The
+            views of the Rocky Mountains from the lake are amazing! This is by
+            far my favorite part of our place, enjoying the scenery and fresh
+            air!`
+    },
   ],
 };
