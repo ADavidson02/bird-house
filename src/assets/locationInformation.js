@@ -54,5 +54,12 @@ export const birdHouse = {
             Leslie, we were exhausted in the evening, and the beds were so comfy
             - even the sofa sleeper!)`,
     },
+    {
+      id: 'bathroomBlurb',
+      title: 'Bathroom',
+      information: `The bathroom is a small, but a stunning ¾ bath (no bathtub). The
+            shower has both a traditional shower head and a rain shower head
+            that can be controlled independently for ultimate comfort.`,
+    },
   ],
 };
