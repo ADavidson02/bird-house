@@ -159,7 +159,23 @@ export const birdHouse = {
     {
       id: 'family',
       title: 'Family',
-      items: ['Board games', 'Baby safety gates', 'Pack\'n Play/travel crib', 'Children\'s dinnerware'],
+      items: [
+        'Board games',
+        'Baby safety gates',
+        "Pack'n Play/travel crib",
+        "Children's dinnerware",
+      ],
+    },
+    {
+      id: 'heatingAndCooling',
+      title: 'Heating & Cooling',
+      items: [
+        'Air conditioning',
+        'Portable fan',
+        'Ceiling fan',
+        'Indoor fireplace',
+        'Heating'
+      ],
     },
   ],
 };
