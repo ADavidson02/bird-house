@@ -76,5 +76,35 @@ export const birdHouse = {
             far my favorite part of our place, enjoying the scenery and fresh
             air!`
     },
+    {
+      id: 'assortedInfo',
+      title: 'Other things to know',
+      information: `You will also find an all in one washer and dryer in the walk-in
+            closet making long term stays very convenient. No need to move from
+            the washer to the dryer, this one machine does both! 420 Friendly –
+            It’s Colorado, it’s legal, so have some fun. Just please be
+            respectful and do not smoke inside and please keep the windows and
+            doors closed while smoking. The deck is a perfect location to
+            partake, please just be respectful of our neighbors and their kids.
+            Be discrete please. Window coverings are designed for privacy when
+            needed but still allow for natural light with adjustable shutters,
+            top down bottom up blinds and sheer or blackout curtains. When they
+            are all closed you can easily sleep during the day if needed. We do
+            live in the main home that you can see in the last picture. If you
+            read through the reviews, many people will mention how private the
+            place is. With the deck being on the back you will hardly ever see
+            us unless we are also enjoying the backyard. We do use the garage
+            below you, however you can hardly hear it open with how well
+            insulated the floor is. We do have 2 dogs. They are both friendly
+            but our white dog, Varly, will bark at you if he is outside until he
+            is comfortable with you, then he just wants to kiss you. They have
+            no access to you unless you choose to enter our backyard. If you are
+            missing your own dogs, or just want to say hello, please feel free
+            to but always close gates behind you and do not let them out of the
+            fenced area. Pack and play as well as a baby gate are available for
+            your use in the Bird House for those traveling with children. Thanks
+            for your interest in our place and please do not hesitate to reach
+            out with any additional questions!`
+    }
   ],
 };
