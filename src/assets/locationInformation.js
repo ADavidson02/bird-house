@@ -148,5 +148,13 @@ export const birdHouse = {
         'Extra pillows and blankets',
       ],
     },
+    {
+      id: 'entertainment',
+      title: 'Entertainment',
+      items: [
+        '50" HDTV with: Amazon Prime Video, Netflix, Disney+',
+        'Game console: Xbox 360',
+      ],
+    },
   ],
 };
