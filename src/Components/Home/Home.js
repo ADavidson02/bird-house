@@ -143,9 +143,9 @@ const Home = (props) => {
                     label='Arrival'
                     value={arrivalDate}
                     onChange={handleArrivalChange}
-                    KeyboardButtonProps={{
-                      'aria-label': 'change arrival date',
-                    }}
+                    // keyboardButtonProps={{
+                    //   'aria-label': 'change arrival date',
+                    // }}
                   />
                 </GridListTile>
                 <GridListTile cols={1}>
@@ -158,9 +158,9 @@ const Home = (props) => {
                     label='Departure'
                     value={departureDate}
                     onChange={handleDepartureChange}
-                    KeyboardButtonProps={{
-                      'aria-label': 'change depature date',
-                    }}
+                    // KeyboardButtonProps={{
+                    //   'aria-label': 'change depature date',
+                    // }}
                   />
                 </GridListTile>
 
