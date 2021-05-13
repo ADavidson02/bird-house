@@ -40,4 +40,13 @@ describe('Header', () => {
     );
     expect(screen.getByText('Gallery')).toBeInTheDocument();
   });
+
+  it('should have a link to the rates page', () => {
+    render(
+      <MemoryRouter>
+        <Header />
+      </MemoryRouter>
+    );
+    expect(screen.getByText('Rates')).toBeInTheDocument();
+  });
 });
