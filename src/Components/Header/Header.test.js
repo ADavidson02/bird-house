@@ -76,4 +76,13 @@ describe('Header', () => {
     );
     expect(screen.getByText('Contact')).toBeInTheDocument();
   });
+
+  it('should have a link to the book page', () => {
+    render(
+      <MemoryRouter>
+        <Header />
+      </MemoryRouter>
+    );
+    expect(screen.getByText('Book')).toBeInTheDocument();
+  });
 });
