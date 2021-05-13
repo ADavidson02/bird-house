@@ -21,5 +21,12 @@ describe ('Home', () => {
     expect(screen.getByText('Arrival')).toBeInTheDocument();
     expect(screen.getByText('Departure')).toBeInTheDocument();
     expect(screen.getByText('Book Now')).toBeInTheDocument();
+  }),
+
+  it('should have a inside space image', () => {
+    render(
+      <Home />
+    )
+    expect(screen.getByAltText('inside space')).toBeInTheDocument()
   })
 })
