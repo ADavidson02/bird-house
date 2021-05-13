@@ -58,4 +58,13 @@ describe('Header', () => {
     );
     expect(screen.getByText('Availability')).toBeInTheDocument();
   });
+
+  it('should have a link to the reviews page', () => {
+    render(
+      <MemoryRouter>
+        <Header />
+      </MemoryRouter>
+    );
+    expect(screen.getByText('Reviews')).toBeInTheDocument();
+  });
 });
