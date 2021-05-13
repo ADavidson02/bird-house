@@ -85,4 +85,13 @@ describe('Header', () => {
     );
     expect(screen.getByText('Book')).toBeInTheDocument();
   });
+
+  it('should have a location name', () => {
+    render(
+      <MemoryRouter>
+        <Header />
+      </MemoryRouter>
+    )
+    expect(screen.getByText('Birdhouse')).toBeInTheDocument()
+  })
 });
