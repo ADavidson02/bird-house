@@ -1,7 +1,7 @@
 import { screen, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import Header from './Header';
 
 describe('Header', () => {
@@ -22,4 +22,13 @@ describe('Header', () => {
     )
     expect(screen.getByText('Overview')).toBeInTheDocument()
   });
+
+  it('should have a link to the map page', () => {
+    render(
+      <MemoryRouter>
+        <Header />
+      </MemoryRouter>
+    )
+    expect(screen.getByText('Map')).toBeInTheDocument()
+  })
 });
