@@ -67,4 +67,13 @@ describe('Header', () => {
     );
     expect(screen.getByText('Reviews')).toBeInTheDocument();
   });
+
+  it('should have a link to the contact page', () => {
+    render(
+      <MemoryRouter>
+        <Header />
+      </MemoryRouter>
+    );
+    expect(screen.getByText('Contact')).toBeInTheDocument();
+  });
 });
