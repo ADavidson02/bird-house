@@ -13,14 +13,14 @@ describe('Header', () => {
     );
     expect(screen.getByText('Home')).toBeInTheDocument();
   });
-    
+
   it('should have a link to the overview page', () => {
     render(
       <BrowserRouter>
         <Header />
       </BrowserRouter>
-    )
-    expect(screen.getByText('Overview')).toBeInTheDocument()
+    );
+    expect(screen.getByText('Overview')).toBeInTheDocument();
   });
 
   it('should have a link to the map page', () => {
@@ -28,7 +28,16 @@ describe('Header', () => {
       <MemoryRouter>
         <Header />
       </MemoryRouter>
-    )
-    expect(screen.getByText('Map')).toBeInTheDocument()
-  })
+    );
+    expect(screen.getByText('Map')).toBeInTheDocument();
+  });
+
+  it('should have a link to the gallery page', () => {
+    render(
+      <MemoryRouter>
+        <Header />
+      </MemoryRouter>
+    );
+    expect(screen.getByText('Gallery')).toBeInTheDocument();
+  });
 });
