@@ -49,4 +49,13 @@ describe('Header', () => {
     );
     expect(screen.getByText('Rates')).toBeInTheDocument();
   });
+
+  it('should have a link to the availability', () => {
+    render(
+      <MemoryRouter>
+        <Header />
+      </MemoryRouter>
+    );
+    expect(screen.getByText('Availability')).toBeInTheDocument();
+  });
 });
