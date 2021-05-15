@@ -10,4 +10,11 @@ describe('Overview', () => {
     expect(screen.getByText('Overview')).toBeInTheDocument()
   })
 
+  it('should have a section for amenities', () => {
+    render(
+      <Overview />
+    )
+    expect(screen.getByText('Amenities')).toBeInTheDocument()
+  })
+  
 })
