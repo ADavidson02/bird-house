@@ -17,4 +17,10 @@ describe('Overview', () => {
     expect(screen.getByText('Amenities')).toBeInTheDocument()
   })
   
+  it('should have a section for house rules', () => {
+    render(
+      <Overview />
+    )
+    expect(screen.getByText('House Rules')).toBeInTheDocument()
+  })
 })
