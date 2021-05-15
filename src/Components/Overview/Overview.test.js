@@ -23,4 +23,11 @@ describe('Overview', () => {
     )
     expect(screen.getByText('House Rules')).toBeInTheDocument()
   })
+
+  it('should have a section for policy and notes', () => {
+    render(
+      <Overview />
+    )
+    expect(screen.getByText('Policy and Notes')).toBeInTheDocument()
+  })
 })
